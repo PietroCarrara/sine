@@ -149,6 +149,20 @@ function class:_init(options)
   SILE.scratch.counters.folio.off = true
 end
 
+function class:registerCommands()
+  plain.registerCommands(self)
+
+  self:registerCommand("noindent", function (_, content)
+    if #SILE.typesetter.state.nodes ~= 0 then
+      SU.warn("\\noindent called after nodes already recieved in a paragraph, the setting will have no effect because the parindent (if any) has already been output")
+    end
+    local parident = SILE.settings:get("current.parindent")
+    SILE.settings:set("current.parindent", SILE.nodefactory.glue())
+    SILE.process(content)
+    SILE.settings:set("current.parindent", parident)
+  end, "Do not add an indent to this text")
+end
+
 function class:endPage ()
   markings()
   SILE.typesetter.frame:leave(SILE.typesetter)
