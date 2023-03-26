@@ -1,6 +1,6 @@
 local pdf = require("justenoughlibtexpdf")
 
-local plain = require('classes.plain')
+local plain = require("classes.plain")
 local class = pl.class(plain)
 class._name = "sine"
 
@@ -128,6 +128,9 @@ function class:_init(options)
 
   SILE.outputter:_ensureInit()
   self:loadPackage("frametricks")
+  self:loadPackage("lists")
+
+  self:loadPackage("sections")
 
   table.insert(SILE.framePrototype.enterHooks, enter)
   table.insert(SILE.framePrototype.leaveHooks, leave)

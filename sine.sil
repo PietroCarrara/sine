@@ -1,7 +1,221 @@
 \begin[class=sine, papersize=a4]{document}
 
-\use[module=packages.lorem]
+This work is based on The Hints and Hijinks System, product of Pandion
+Games (https://pandiongames.com/), developed and authored by Andrew
+Boyd, and licensed for our use under the Creative Commons Attribution
+4.0 License (https://creativecommons.org/licenses/by/4.0/)
 
-\lorem[words=1000]{}
+\section{Introduction}
+
+Hints and Hijinx are solo journaling games. That means that
+this game is played by yourself, by writing your actions and
+answers to questions in a journal, notebook or word processor.
+Write more of your story after each step, dice roll, and card
+flip.
+
+Each game may be unique, with its own twists, and potential
+rule changes that the creator put in place to support the story
+and its mystery, but the rules outlined here are the core rules
+for Hints & Hijinx games.
+
+You’re ultimately in control of where you want to story to go
+but if you find yourself in a dark place, or no longer enjoying
+where the story is taking you, it’s okay to stop, rewind, and try
+something else.
+
+\section{Character Creation}
+
+Your character has two skills. Assign a d12 to one skill and a d10
+to the other.
+
+You’ll use these skills to overcome complications.
+
+Make sure to check individual games as to what the skills are, or
+if there are more than two.
+
+\section{Using Your Skills}
+
+When using your Skill, roll the current die associated with it
+(d10 or d12 to start). If you are instructed to reduce a Skill, use
+the next smallest die for any future Skill roles of that Skill.
+
+\center{d12 → d10 → d8 s d6 → d4 → d2}
+
+\begin{itemize}
+  \item{On a 1-2 Failure | No clue | Reduce Skill}
+  \item{On a 3-4 Hijinks | No clue | Reduce Skill}
+  \item{On a 5+  Success! | Find 1 clue}
+  \item{On a 10+ Success! | Find 2 clues}
+\end{itemize}
+
+On a Failure
+
+Something bad happens because of your attempt.
+
+On a Hijinks
+
+Wacky hijinks cause no clues to be found.
+
+Refill Your Cup
+
+Once per game, reset both skills to their max die rating. Counts
+as a location visit.
+
+\section{Setup}
+
+Hints and Hijinx games are split into three stages: The Setup,
+The Investigation, and The Deduction.
+
+\subsection{Gather your Materials}
+
+\begin{itemize}
+  \item{Pen and paper}
+  \item{This book}
+  \item{A set of dice: d4, d6, d8, d10, d12}
+  \item{A coin (d2)}
+  \item{A deck of playing cards - shuffled, no jokers}
+\end{itemize}
+
+\subsection{Draw the Map}
+
+Use the locations provided, or create your own, and draw the
+map you are playing in with 13 locations. This is optional, but
+fun.
+
+Label the map’s locations. When you discover a clue, mark
+where you found it. Try to relate clues and locations together
+when you write about them.
+
+\section{The Investigation}
+
+During the Investigation, you’ll complete rounds of play until
+you’ve visited all 13 locations, or you are satisfied with the
+number of clues you’ve collected.
+
+Each round, you will take the following actions, in order:
+
+\begin{itemize}
+  \item{Choose a location to investigate}
+  \item{Roll on the complications table.}
+  \item{Write about and resolve the complication using your skills.}
+  \begin{item}
+    If you are successful, you gather a clue.
+    \begin{itemize}
+      \item{Draw a card from the deck to lookup what clue you find.}
+    \end{itemize}
+  \end{item}
+  \item{If you fail or run into hijinks, write about how you are hindered in your search.}
+  \item{Continue to the next location, or begin the Deduction phase.}
+\end{itemize}
+
+For your first round, you pick a location, roll on the
+complications table to see what happens and potentially gather
+your first clue.
+
+\section{The Deduction}
+
+\subsection{Piece Together the Clues}
+
+You can only perform The Deduction once per game! You
+cannot go back to The Investigation phase once you start
+making your deduction. Make sure you are ready to piece
+together your clues to find out what’s happening.
+
+Write a hypothesis of what has happened that uses as many of
+the clues you have found as possible. Mark which clues you
+used. Once done, you’ll make the Deduction Roll.
+
+Consider answering the questions:
+
+\begin{itemize}
+  \item{Who is the perpetrator?}
+  \item{What crime was committed?}
+  \item{Where did it happen?}
+  \item{When did the events occur?}
+  \item{Why did they do it?}
+\end{itemize}
+
+\subsection{The Deduction Roll}
+
+Start your Deduction Die at a d0, for each clue you used in
+your hypothesis of what happened, increase the Deduction Die
+by one step:
+
+\center{d0 → d2 → d4 → d6 → d8 → d10 → d12}
+
+After d12, add +1 to your roll for each additional clue you used.
+
+To see if you were correct in your deductions, roll the
+Deduction Die and add any modifiers.
+
+\begin{itemize}
+  \item{1-2: you were wrong, and there is a bad consequence for
+  your poor deductions.}
+  \item{3-4: you were wrong, and there is a hijinks consequence
+  because of your deductions.}
+  \item{5+: you were right, and you are successful.
+  Finally, write a conclusion about what happened afterward
+  based on the result of the Deduction Roll.}
+\end{itemize}
+
+Finally, write a conclusion about what happened afterward
+based on the result of the Deduction Roll.
+
+\section{Player Tips}
+
+\subsection{Locations}
+
+Build out the location’s details when you visit it or draw it on
+your map. Consider the following questions:
+
+\begin{itemize}
+  \item{What is the name of this place?}
+  \item{Who commonly frequents or works here?}
+  \item{What does it provide for the town, or community?}
+\end{itemize}
+
+\subsection{Complications}
+
+There will likely be many ways complications are structured in
+Hints and Hijinx games, so make sure to read how that
+particular mystery is doing it. Build upon the complication’s
+text, relate it to the location, and determine how you will
+overcome it. Then roll the appropriate skill for your actions.
+
+\subsection{Clues}
+
+Clues, like complications, can be constructed in a number of
+ways depending on the Hints and Hijinx game, so make sure to
+read how each game asks you to gather clues.
+
+Importantly, track the location each clue was found and the
+complication you overcame to gather it. Use those pieces of
+information to add context to your clues!
+
+When writing your hypothesis during the deduction, you want
+to piece the clues together like a puzzle, but clues can
+specifically relate to the who, what, where, when, or why as
+long as each is accounted for.
+
+\subsection{Writing Sequence Options}
+
+When writing in your journal, you can take a Step-By-Step, or
+Full Resolution approach to each investigation loop, depending
+on how you like to play.
+
+For Step-By-Step, stop and write after each task:
+
+\begin{itemize}
+  \item{Describe the location, answer its questions.}
+  \item{Reveal the Complication, write its opening, and how you plan to overcome it.}
+  \item{Roll your skill check, write about the resolution.}
+  \item{Look up the clue, then write about how you discovered it.}
+\end{itemize}
+
+For the Full Resolution approach, complete a full loop, and
+then write about it all at once:
+
+Location + Complication + Skill Check + Clue → then write
+your journal entry.
 
 \end{document}
