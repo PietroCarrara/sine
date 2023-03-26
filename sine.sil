@@ -1,5 +1,7 @@
 \begin[class=sine, papersize=a4]{document}
 
+\use[module=packages.lorem]
+
 This work is based on The Hints and Hijinks System, product of Pandion
 Games (https://pandiongames.com/), developed and authored by Andrew
 Boyd, and licensed for our use under the Creative Commons Attribution
@@ -217,5 +219,7 @@ then write about it all at once:
 
 Location + Complication + Skill Check + Clue → then write
 your journal entry.
+
+\lorem[words=2000]
 
 \end{document}

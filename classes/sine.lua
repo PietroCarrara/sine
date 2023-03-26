@@ -74,6 +74,18 @@ class.defaultFrameset = {
 }
 class.firstContentFrame = "page1"
 
+local function markings()
+  local page = SILE.getFrame("page")
+  if page == nil then return end
+
+  local w = page:width()
+  local h = page:height()
+  SILE.outputter:drawRule(w/2, 0, 1, h)
+  for y = 0, 3 do
+    SILE.outputter:drawRule(0, h*y/4, w, 1)
+  end
+end
+
 local enter = function (self, typesetter)
   if not self.orientation then return end
 
@@ -108,7 +120,6 @@ local enter = function (self, typesetter)
     pdf.setmatrix(1, 0, 0, 1, -x-2*midw+midh, y+midw)
   end
 end
-
 local leave = function(self, _)
   if not self.orientation then return end
 
@@ -136,6 +147,34 @@ function class:_init(options)
   table.insert(SILE.framePrototype.leaveHooks, leave)
 
   SILE.scratch.counters.folio.off = true
+end
+
+function class:endPage ()
+  markings()
+  SILE.typesetter.frame:leave(SILE.typesetter)
+  self:runHooks("endpage")
+end
+
+function class:finish()
+  SILE.inputter:postamble()
+  SILE.call("vfill")
+  while not SILE.typesetter:isQueueEmpty() do
+    SILE.call("supereject")
+    SILE.typesetter:leaveHmode(true)
+    SILE.typesetter:buildPage()
+    if not SILE.typesetter:isQueueEmpty() then
+      SILE.typesetter:initNextFrame()
+    end
+  end
+  SILE.typesetter:runHooks("pageend") -- normally run by the typesetter
+  SILE.typesetter.frame:leave(SILE.typesetter)
+  markings()
+  self:runHooks("endpage")
+  if SILE.typesetter then
+    assert(SILE.typesetter:isQueueEmpty(), "queues not empty")
+  end
+  SILE.outputter:finish()
+  self:runHooks("finish")
 end
 
 return class
