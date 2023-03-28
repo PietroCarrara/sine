@@ -5,11 +5,18 @@ local class = pl.class(plain)
 class._name = "sine"
 
 local marginMid = "10mm"
-local gutter = "10mm"
+local gutter = "7mm"
 
 class.defaultFrameset = {
-  page1 = {
+  page8 = {
     top = "0%ph+"..gutter.."/2",
+    left = "0%pw+"..gutter,
+    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+    height = "25%ph-"..gutter,
+    orientation = "left",
+  },
+  page1 = {
+    top = "25%ph+"..gutter.."/2",
     left = "0%pw+"..gutter,
     width = "50%pw-("..gutter.."+"..marginMid.."/2)",
     height = "25%ph-"..gutter,
@@ -17,7 +24,7 @@ class.defaultFrameset = {
     orientation = "left",
   },
   page2 = {
-    top = "25%ph+"..gutter.."/2",
+    top = "50%ph+"..gutter.."/2",
     left = "0%pw+"..gutter,
     width = "50%pw-("..gutter.."+"..marginMid.."/2)",
     height = "25%ph-"..gutter,
@@ -25,27 +32,19 @@ class.defaultFrameset = {
     orientation = "left",
   },
   page3 = {
-    top = "50%ph+"..gutter.."/2",
+    top = "75%ph+"..gutter.."/2",
     left = "0%pw+"..gutter,
     width = "50%pw-("..gutter.."+"..marginMid.."/2)",
     height = "25%ph-"..gutter,
     next = "page4",
     orientation = "left",
   },
-  page4 = {
-    top = "75%ph+"..gutter.."/2",
-    left = "0%pw+"..gutter,
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page5",
-    orientation = "left",
-  },
-  page5 = {
+  page7 = {
     top = "0%ph+"..gutter.."/2",
     left = "50%pw".."+"..marginMid.."/2",
     width = "50%pw-("..gutter.."+"..marginMid.."/2)",
     height = "25%ph-"..gutter,
-    next = "page6",
+    next = "page8",
     orientation = "right",
   },
   page6 = {
@@ -56,27 +55,27 @@ class.defaultFrameset = {
     next = "page7",
     orientation = "right",
   },
-  page7 = {
+  page5 = {
     top = "50%ph+"..gutter.."/2",
     left = "50%pw".."+"..marginMid.."/2",
     width = "50%pw-("..gutter.."+"..marginMid.."/2)",
     height = "25%ph-"..gutter,
-    next = "page8",
+    next = "page6",
     orientation = "right",
   },
-  page8 = {
+  page4 = {
     top = "75%ph+"..gutter.."/2",
     left = "50%pw".."+"..marginMid.."/2",
     width = "50%pw-("..gutter.."+"..marginMid.."/2)",
     height = "25%ph-"..gutter,
     orientation = "right",
+    next = "page5",
   },
 }
 class.firstContentFrame = "page1"
 
 local function markings()
-  local page = SILE.getFrame("page")
-  if page == nil then return end
+  local page = assert(SILE.getFrame("page"))
 
   local w = page:width()
   local h = page:height()
@@ -140,13 +139,18 @@ function class:_init(options)
   SILE.outputter:_ensureInit()
   self:loadPackage("frametricks")
   self:loadPackage("lists")
+  self:loadPackage("image")
 
   self:loadPackage("sections")
+  self:loadPackage("figure")
 
   table.insert(SILE.framePrototype.enterHooks, enter)
   table.insert(SILE.framePrototype.leaveHooks, leave)
 
   SILE.scratch.counters.folio.off = true
+
+  markings()
+  plain.registerHook(self, "newpage", markings)
 end
 
 function class:registerCommands()
@@ -161,34 +165,6 @@ function class:registerCommands()
     SILE.process(content)
     SILE.settings:set("current.parindent", parident)
   end, "Do not add an indent to this text")
-end
-
-function class:endPage ()
-  markings()
-  SILE.typesetter.frame:leave(SILE.typesetter)
-  self:runHooks("endpage")
-end
-
-function class:finish()
-  SILE.inputter:postamble()
-  SILE.call("vfill")
-  while not SILE.typesetter:isQueueEmpty() do
-    SILE.call("supereject")
-    SILE.typesetter:leaveHmode(true)
-    SILE.typesetter:buildPage()
-    if not SILE.typesetter:isQueueEmpty() then
-      SILE.typesetter:initNextFrame()
-    end
-  end
-  SILE.typesetter:runHooks("pageend") -- normally run by the typesetter
-  SILE.typesetter.frame:leave(SILE.typesetter)
-  markings()
-  self:runHooks("endpage")
-  if SILE.typesetter then
-    assert(SILE.typesetter:isQueueEmpty(), "queues not empty")
-  end
-  SILE.outputter:finish()
-  self:runHooks("finish")
 end
 
 return class
