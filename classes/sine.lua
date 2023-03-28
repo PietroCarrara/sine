@@ -4,74 +4,7 @@ local plain = require("classes.plain")
 local class = pl.class(plain)
 class._name = "sine"
 
-local marginMid = "10mm"
-local gutter = "7mm"
-
-class.defaultFrameset = {
-  page8 = {
-    top = "0%ph+"..gutter.."/2",
-    left = "0%pw+"..gutter,
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    orientation = "left",
-  },
-  page1 = {
-    top = "25%ph+"..gutter.."/2",
-    left = "0%pw+"..gutter,
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page2",
-    orientation = "left",
-  },
-  page2 = {
-    top = "50%ph+"..gutter.."/2",
-    left = "0%pw+"..gutter,
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page3",
-    orientation = "left",
-  },
-  page3 = {
-    top = "75%ph+"..gutter.."/2",
-    left = "0%pw+"..gutter,
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page4",
-    orientation = "left",
-  },
-  page7 = {
-    top = "0%ph+"..gutter.."/2",
-    left = "50%pw".."+"..marginMid.."/2",
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page8",
-    orientation = "right",
-  },
-  page6 = {
-    top = "25%ph+"..gutter.."/2",
-    left = "50%pw".."+"..marginMid.."/2",
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page7",
-    orientation = "right",
-  },
-  page5 = {
-    top = "50%ph+"..gutter.."/2",
-    left = "50%pw".."+"..marginMid.."/2",
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    next = "page6",
-    orientation = "right",
-  },
-  page4 = {
-    top = "75%ph+"..gutter.."/2",
-    left = "50%pw".."+"..marginMid.."/2",
-    width = "50%pw-("..gutter.."+"..marginMid.."/2)",
-    height = "25%ph-"..gutter,
-    orientation = "right",
-    next = "page5",
-  },
-}
+class.defaultFrameset = {} -- See class:declareFrames()
 class.firstContentFrame = "page1"
 
 local function markings()
@@ -79,9 +12,9 @@ local function markings()
 
   local w = page:width()
   local h = page:height()
-  SILE.outputter:drawRule(w/2, 0, 1, h)
+  SILE.outputter:drawRule(w/2-0.5, 0, 1, h)
   for y = 0, 3 do
-    SILE.outputter:drawRule(0, h*y/4, w, 1)
+    SILE.outputter:drawRule(0, h*y/4-0.5, w, 1)
   end
 end
 
@@ -134,6 +67,7 @@ local leave = function(self, _)
 end
 
 function class:_init(options)
+
   plain._init(self, options)
 
   SILE.outputter:_ensureInit()
@@ -153,6 +87,42 @@ function class:_init(options)
   plain.registerHook(self, "newpage", markings)
 end
 
+function class:declareOptions ()
+  plain.declareOptions(self)
+
+  self:declareOption("gutter", function (_, value)
+    if value then
+      SILE.settings:set("sine.gutter", value, true)
+    end
+    return SILE.settings:get("sine.gutter")
+  end)
+
+  self:declareOption("margin-mid", function (_, value)
+    if value then
+      SILE.settings:set("sine.margin-mid", value, true)
+    end
+    return SILE.settings:get("sine.margin-mid")
+  end)
+end
+
+function class:declareSettings()
+  plain.declareSettings(self)
+
+  SILE.settings:declare({
+    parameter = "sine.gutter",
+    type = "measurement",
+    default = SILE.measurement("7mm"),
+    help = "Distance between each frame",
+  })
+
+  SILE.settings:declare({
+    parameter = "sine.margin-mid",
+    type = "measurement",
+    default = SILE.measurement("10mm"),
+    help = "Distance between the left frame column and the right frame column",
+  })
+end
+
 function class:registerCommands()
   plain.registerCommands(self)
 
@@ -165,6 +135,79 @@ function class:registerCommands()
     SILE.process(content)
     SILE.settings:set("current.parindent", parident)
   end, "Do not add an indent to this text")
+end
+
+function class:declareFrames()
+  local gutter = SILE.settings:get("sine.gutter")
+  local marginMid = SILE.settings:get("sine.margin-mid")
+
+  self.defaultFrameset = {
+    page8 = {
+      top = "0%ph+"..gutter.."/2",
+      left = "0%pw+"..gutter,
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      orientation = "left",
+    },
+    page1 = {
+      top = "25%ph+"..gutter.."/2",
+      left = "0%pw+"..gutter,
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      next = "page2",
+      orientation = "left",
+    },
+    page2 = {
+      top = "50%ph+"..gutter.."/2",
+      left = "0%pw+"..gutter,
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      next = "page3",
+      orientation = "left",
+    },
+    page3 = {
+      top = "75%ph+"..gutter.."/2",
+      left = "0%pw+"..gutter,
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      next = "page4",
+      orientation = "left",
+    },
+    page7 = {
+      top = "0%ph+"..gutter.."/2",
+      left = "50%pw".."+"..marginMid.."/2",
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      next = "page8",
+      orientation = "right",
+    },
+    page6 = {
+      top = "25%ph+"..gutter.."/2",
+      left = "50%pw".."+"..marginMid.."/2",
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      next = "page7",
+      orientation = "right",
+    },
+    page5 = {
+      top = "50%ph+"..gutter.."/2",
+      left = "50%pw".."+"..marginMid.."/2",
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      next = "page6",
+      orientation = "right",
+    },
+    page4 = {
+      top = "75%ph+"..gutter.."/2",
+      left = "50%pw".."+"..marginMid.."/2",
+      width = "50%pw-("..gutter.."+"..marginMid.."/2)",
+      height = "25%ph-"..gutter,
+      orientation = "right",
+      next = "page5",
+    },
+  }
+
+  plain.declareFrames(self, self.defaultFrameset)
 end
 
 return class
