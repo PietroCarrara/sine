@@ -1,0 +1,143 @@
+\begin[class=sine, papersize=a4]{document}
+\language[main=pt]
+
+\use[module=packages.rules]
+\use[module=packages.svg]
+\use[module=packages.ptable]
+\use[module=packages.parbox]
+\use[module=packages.framebox]
+\use[module=utils]
+
+\font[family=SF Pro Text, size=9pt]
+
+\neverindent
+
+\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
+\define[command=choice]{\strong{\svg[src=square.svg, width=0.8em] \process{}}}
+\define[command=marked]{\bigbold{\svg[src=marked.svg, width=0.8em] \process{}}}
+\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
+
+\define[command=sine.section-font]{\font[size = 17pt, filename=tests/razorgirl/BebasNeue-Regular.ttf]{\process}}
+
+% Capa
+\fig[src=razorgirl.png, margin-x=0, margin-top=0]
+\medskip
+\center{\font[size=24pt, filename=tests/razorgirl/ROBOTECH GP.ttf]{RAZORGIRL}}
+\bigskip
+\novbreak
+\bigskip
+\novbreak
+\begin{center}
+\hrule[height=0.5pt, width=66%fw]
+\novbreak
+\smallskip
+\novbreak
+\font[size=7pt]{NOME}
+\end{center}
+
+\section{Motivação}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Adrenalina} - Pular para o perigo sem um plano.
+\smallskip
+\choice{Vingança} - Evitar ser detectada ou infiltrar-se em um local.
+\smallskip
+\choice{Sangue} - Matar sem necessidade.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=1]
+
+\section{Antecedentes}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Mistério} - O que te levou a cromar tanto o seu corpo? Apenas você sabe o motivo.
+\smallskip
+\choice{Agitadora} - Você integrou alguma causa e ainda mantém contato com seus membros.
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=2]
+
+\section{Flags}
+\tutorial{Escolha ou crie 2.}\par
+\choice{Compassiva} - Me ofereça uma solução mais fácil, mas que requer abusar de alguém mais fraco.
+\smallskip
+\choice{Compreensiva} - Contraponha minha proposta com outra menos atrativa que devo aceitar ou desarmonizar o grupo.
+\smallskip
+\choice{Peculiar} - Recuse minha ajuda por eu ser diferente.
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=2]
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=2]
+
+\framebreak
+\section{Habilidades}
+\tutorial{Atribua esses valores às suas habilidades:\par{}16(+2), 15(+1), 13(+1), 12(0), 9(0), 8(-1)}
+\begin[cols=50%fw 50%fw, cellborder=0]{ptable}
+  \begin{row}
+    \cell{\attribute[name=Corpo, mod=COR, condition=Ferida]}
+    \cell{\attribute[name=Agilidade, mod=AGI, condition=Trêmula]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Mente, mod=MEN, condition=Confusa]}
+    \cell{\attribute[name=Tecnologia, mod=TEC, condition=Quebrada]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Espírito, mod=ESP, condition=Desolada]}
+    \cell{\attribute[name=Edge, mod=EDG, condition=Abalada]}
+  \end{row}
+\end{ptable}
+
+\section{Armas}
+\medskip
+\textarea[lines=4]
+\section{Implantes}
+\medskip
+\textarea[lines=4]
+\section{Notas}
+\medskip
+\textarea[lines=4]
+
+\section{Movimentos}
+\begin[title=TIRO CERTEIRO]{move}
+  Quando \strong{atacar um oponente surpreso ou indefeso à distância}, indique um
+  alvo e role + AGI: Com 7-9, aplique o efeito de acordo com o alvo escolhido. Com 10+, aplique o
+  efeito e não revele sua posição:
+  \begin{itemize}
+    \item{Braços: O alvo deixa cair qualquer coisa que esteja segurando.}
+    \item{Pernas: O alvo fica debilitado e passa a se mover lentamente.}
+    \item{Outro: Você quebra alguma coisa importante para seu alvo.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=REMOVER LIMITADORES]{move}
+  Quando \strong{realizar um teste usando seus implantes}, antes de rolar, você pode descrever como esses
+  implantes violam os limites que seu corpo consegue aguentar e marcar a Debilidade do status associado
+  ao teste. Se o fizer, você escolhe o resultado dos dados ao invés de rolá-los.
+\end{move}
+\medskip
+\begin[title=LER CROMO]{move}
+  Quando \strong{analisar os implnantes de alguém}, role + TEC. Com 10+, faça 2 das perguntas
+  abaixo. Com 7-9, faça 1. Receba +1 ao agir de acordo com as respostas.
+  \begin{itemize}
+    \item{Como posso abusar das fraquezas de alguma desses implantes?}
+    \item{Há algum implante instaladado que eu não esteja vendo?}
+    \item{Que implante mais deveria me preocupar?}
+    \item{Que clínica instalou os implantes nessa pessoa? Foi um trabalho profissional ou amador?}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=CROMADA]{move}
+  Você recebe dois implantes adicionais durante a criação da personagem.
+\end{move}
+
+\end{document}
