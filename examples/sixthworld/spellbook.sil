@@ -1,0 +1,91 @@
+\begin[class=sine, papersize=a4]{document}
+\language[main=pt]
+
+\use[module=packages.rules]
+\use[module=packages.svg]
+\use[module=packages.ptable]
+\use[module=utils]
+
+\font[family=SF Pro Text, size=9pt]
+
+\neverindent
+
+\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
+\define[command=choice]{\strong{\svg[src=square.svg, width=0.8em] \process{}}}
+\define[command=marked]{\bigbold{\svg[src=marked.svg, width=0.8em] \process{}}}
+\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
+
+\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{\process}}
+
+% Capa
+\fig[src=Pentagram_math.png, margin-x=0, margin-top=0]
+\bigskip
+\bigskip
+\center{\font[size=24pt, filename=examples/sixthworld/Averia-Bold.ttf]{SPELLBOOK}}
+\framebreak
+
+\section{Truques}
+\begin[title=LUZ]{move}
+  Um item tocado por você brilha com luz arcana, com a força de no máximo uma lanterna forte.
+  Você possui controle sobre a cor e a força da luz. O feitiço dura enquanto o item estiver
+  em sua presença.
+\end{move}
+\begin[title=SERVO INVISÍVEL]{move}
+  Este feitiço conjura um espírito invisível simples que carrega um item leve, mas não consegue
+  ir buscar objetos por conta própria. Qualquer coisa carregada por um servo invisível se torna
+  também invisível. Caso o servo receba dano ou saia de sua presença, ele se desfaz imediatamente.
+  De outra forma, ele o serve até que o feitiço seja encerrado.
+\end{move}
+\begin[title=PRESTIDIGITAÇÃO]{move}
+  Você consegue fazer alguns truques com sua magia. Se tocar um item durante a conjuração deste
+  truque, você poderá fazer alterações cosméticas a ele: limpá-lo, sujá-lo, resfriá-lo, aquecê-lo,
+  mudar seu sabor ou sua cor. Se conjurar este feitiço sem tocar um item, poderá invocar pequenas
+  ilusões, cujo tamanho não ultrapasse o seu. As imagens criadas por Prestidigitação são simples e
+  obviamente ilusórias: elas não enganarão ninguém, mas poderão entreter as pessoas.
+\end{move}
+
+\section{Relógio de Dreno}
+\tutorial{Quando este relógio estiver cheio, esvazie-o e marque uma debilidade.}\par
+\center{\svg[src=4-clock.svg, width=50%fw]}
+
+\framebreak
+
+\section{Feitiços}
+\tutorial{Escolha 2. Escolha mais um se abrir mão de seu implante inicial.}\par
+\begin[title=CAMADA DE GELO, marked=false]{move}
+  Este feitiço cria uma camada de gelo que cobre o chão de uma área visível, dificultando a locomoção.
+  O gelo não é mágico, e derrete com o passar do tempo (variando conforme a temperatura do ambiente).
+\end{move}
+\begin[title=COMBUSTÃO, marked=false]{move}
+  Este feitiço acelera o movimento molecular de um alvo não-vivo que você possa ver.
+  Depois de alguns instantes, ele pega fogo espontaneamente.
+\end{move}
+\begin[title=CONTATAR ESPÍRITOS, marked=false]{move}
+  Diga o nome do espírito que deseja contatar (ou deixe isso a cargo do Mestre). Você o atrai através
+  do plano astral, até que esteja próximo o suficiente para conversarem. Ele é obrigado a responder a
+  uma questão que você perguntar da melhor forma possível.
+\end{move}
+\begin[title=INFLUENCIAR, marked=false]{move}
+  Você implanta uma sugestão na mente de alguém que possa ver. O alvo segue esta sugestão como se
+  fosse uma ideia própria. A sugestão não pode colocar a vida do alvo em risco imediato, nem ir
+  contra uma de suas diretrizes (“deveria me jogar daquele penhasco” ou “deveria deixar estes
+  mercenários passar pela porta que estou protegendo”). A sugestão naturalmente se dispersa após alguns
+  minutos.
+\end{move}
+\begin[title=MÃOS MÁGICAS, marked=false]{move}
+  Este feitiço cria um par de mãos invisíveis que podem segurar ou manipular itens. Elas não conseguem
+  realizar feitos que requerem destreza ou força, como pegar algo de um bolso ou arrancar um item da mão
+  de alguém. As mãos podem atravessar paredes, mas você não compartilha o tato delas. Você não pode conjurar outros feitiços enquanto Mãos Mágicas estiver ativo.
+\end{move}
+\begin[title=PRENDER PESSOA, marked=false]{move}
+  Escolha até duas pessoas que você possa ver. Até que você conjure outro feitiço ou abandone
+  sua presença, elas não poderão realizar qualquer ação a não ser falar. O efeito é cancelado
+  imediatamente se os alvos sofrerem qualquer tipo de dano.
+\end{move}
+\begin[title=SENTIDO EMPRESTADO, marked=false]{move}
+  Toque em um alvo e escolha um de seus 5 sentidos: Você o sente como se fosse seu, e o seu próprio
+  sentido é totalmente sobreposto pelo do alvo. Você pode parar de tocar no alvo depois do contato
+  inicial. Enquanto durar este feitiço, você não pode conjurar outros feitiços.
+\end{move}
+
+\end{document}

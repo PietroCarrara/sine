@@ -20,14 +20,22 @@ function package:registerCommands()
 
   self:registerCommand("move", function (opts, content)
     local title = opts.title or "untitled"
+    local marked = SU.boolean(opts.marked, true)
 
-    SILE.call("marked", {}, function ()
-      SILE.typesetter:typeset(title)
-    end)
+    if marked then
+      SILE.call("marked", {}, function ()
+        SILE.typesetter:typeset(title)
+      end)
+    else
+      SILE.call("choice", {}, function ()
+        SILE.typesetter:typeset(title)
+      end)
+    end
     SILE.call("novbreak")
     SILE.call("smallskip")
     SILE.call("novbreak")
     SILE.process(content)
+    SILE.typesetter:leaveHmode()
   end)
 
   self:registerCommand("attribute", function (opts, content)

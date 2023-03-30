@@ -1,0 +1,159 @@
+\begin[class=sine, papersize=a4]{document}
+\language[main=pt]
+
+\use[module=packages.rules]
+\use[module=packages.svg]
+\use[module=packages.ptable]
+\use[module=utils]
+
+\font[family=SF Pro Text, size=9pt]
+
+\neverindent
+
+\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
+\define[command=choice]{\strong{\svg[src=square.svg, width=0.8em] \process{}}}
+\define[command=marked]{\bigbold{\svg[src=marked.svg, width=0.8em] \process{}}}
+\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
+
+\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{\process}}
+
+% Capa
+\fig[src=spellweaver.png, margin-x=0, margin-top=0]
+\medskip
+\center{\font[size=24pt, filename=examples/sixthworld/Averia-Bold.ttf]{SPELLWEAVER}}
+\bigskip
+\novbreak
+\bigskip
+\novbreak
+\begin{center}
+\hrule[height=0.5pt, width=66%fw]
+\novbreak
+\smallskip
+\novbreak
+\font[size=7pt]{NOME}
+\end{center}
+
+\section{Habilidades}
+\tutorial{Atribua esses valores às suas habilidades:\par{}16(+2), 15(+1), 13(+1), 12(0), 9(0), 8(-1)}
+\begin[cols=50%fw 50%fw, cellborder=0]{ptable}
+  \begin{row}
+    \cell{\attribute[name=Corpo, mod=COR, condition=Ferida]}
+    \cell{\attribute[name=Agilidade, mod=AGI, condition=Trêmulo]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Mente, mod=MEN, condition=Confuso]}
+    \cell{\attribute[name=Tecnologia, mod=TEC, condition=Quebrado]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Espírito, mod=ESP, condition=Desolado]}
+    \cell{\attribute[name=Edge, mod=EDG, condition=Abalado]}
+  \end{row}
+\end{ptable}
+
+\section{Armas}
+\medskip
+\textarea[lines=4]
+\section{Feitiços/Implantes}
+\medskip
+\textarea[lines=4]
+\section{Notas}
+\medskip
+\textarea[lines=4]
+
+\section{Movimentos}
+\begin[title=CONJURAR FEITIÇO]{move}
+  Quando \strong{conjurar um feitiço}, role+ESP. Com 10+, você conjura o feitiço sem complicações.
+  Com 7-9, conjure o feitiço, avance o relógio de dreno, e escolha 1:
+  \begin{itemize}
+    \item{Avance novamente o relógio de dreno.}
+    \item{O feitiço tem efeitos colaterais indesejados.}
+    \item{Você atraiu atenção indesejada ou se colocou em uma situação complicada.}
+  \end{itemize}
+  Quando o relógio de dreno estiver cheio, esvazie-o e marque uma condição. Truques não ativam este
+  movimento. Sempre que você puder adquirir um novo implante, você pode ao invés disso aprender um novo
+  feitiço.
+\end{move}
+\smallskip
+\begin[title=MAGO DE COMBATE]{move}
+  Você pode realizar os movimentos \strong{Disparar} e \strong{Disparo em Combate} usando +ESP ao
+  invés de +DES. Se o fizer, com 7-9, além dos efeitos desses movimentos, você também avança o relógio
+  de dreno.
+\end{move}
+\smallskip
+\begin[title=PERCEPÇÃO ASTRAL]{move}
+  Você pode enxergar formas astrais de seres vivos e interpretar suas cores, formatos e luzes para
+  adquirir informação. Quando tentar interpretar uma forma astral, role+EDG. Com 10+, faça ao mestre
+  três das perguntas abaixo. Com 7-9, faça duas. Receba +1 quando agir de acordo com as respostas.
+  \begin{itemize}
+    \item{Qual o estado emocional deste ser?}
+    \item{Este ser pode usar magia?}
+    \item{A magia deste ser é mais forte que a minha?}
+    \item{Este ser está sob os efeitos de quais doenças/substâncias?}
+    \item{Quanto de humanidade ainda há nesse ser?}
+  \end{itemize}
+\end{move}
+\smallskip
+\begin[title=PROJEÇÃO ASTRAL]{move}
+  Você pode separar totalmente sua consciência do seu corpo físico, deixando-o para trás enquanto
+  navega pelo mundo astral. Você deve voltar até ele para deixar de projetar astralmente.
+\end{move}
+
+\section{Motivação}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Poder} - Cause medo e terror com sua magia.
+\smallskip
+\choice{Conhecimento} - Descubra algo sobre algum mistério mágico.
+\smallskip
+\choice{Nutrir} - Ajude algo ou alguém a crescer.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=1]
+
+\section{Antecedentes}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Selvagem} - Você consegue conversar com animais.
+\smallskip
+\choice{Corporativo} - Você conhece a etiqueta da corporação para qual trabalhava.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=2]
+
+\section{Flags}
+\tutorial{Escolha ou crie 2.}\par
+\choice{Andrógeno} - Me coloque em uma situação que poderia me fazer revelar meu gênero acidentalmente.
+\smallskip
+\choice{Curioso} - Me convença a experimentar ou tentar algo que eu provavelmente não deveria.
+\smallskip
+\choice{Honesto} - Me envolva em alguma farsa que eu não consiga manter.
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=3]
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=2]
+
+\framebreak
+
+\begin{raggedleft}
+  \begin[size=22pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{font}
+    Watch your back\break
+    shoot straight\break
+    conserve ammo\break
+    and never make\break
+    a deal with a\break
+    dragon
+  \end{font}
+\end{raggedleft}
+\bigskip
+\bigskip
+\center{\fig[src=shadowrun-logo.png, width=50%fw]}
+
+\end{document}
