@@ -1,0 +1,185 @@
+\begin[class=sine, papersize=a4]{document}
+\language[main=pt]
+
+\use[module=packages.rules]
+\use[module=packages.svg]
+\use[module=packages.ptable]
+\use[module=utils]
+
+\font[family=SF Pro Text, size=9pt]
+
+\neverindent
+
+\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
+\define[command=choice]{\strong{\svg[src=square.svg, width=0.8em] \process{}}}
+\define[command=marked]{\bigbold{\svg[src=marked.svg, width=0.8em] \process{}}}
+\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
+
+\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{\process}}
+
+% Capa
+\fig[src=dronejockey.png, margin-x=0, margin-top=0]
+\medskip
+\center{\font[size=17pt, filename=examples/sixthworld/Sixtyfour.ttf]{DRONEJOCKEY}}
+\bigskip
+\novbreak
+\bigskip
+\novbreak
+\begin{center}
+\hrule[height=0.5pt, width=66%fw]
+\novbreak
+\smallskip
+\novbreak
+\font[size=7pt]{NOME}
+\end{center}
+
+\section{Habilidades}
+\tutorial{Atribua esses valores às suas habilidades:\par{}16(+2), 15(+1), 13(+1), 12(0), 9(0), 8(-1)}
+\begin[cols=50%fw 50%fw, cellborder=0]{ptable}
+  \begin{row}
+    \cell{\attribute[name=Corpo, mod=COR, condition=Ferida]}
+    \cell{\attribute[name=Agilidade, mod=AGI, condition=Trêmulo]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Mente, mod=MEN, condition=Confuso]}
+    \cell{\attribute[name=Tecnologia, mod=TEC, condition=Quebrado]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Espírito, mod=ESP, condition=Desolado]}
+    \cell{\attribute[name=Edge, mod=EDG, condition=Abalado]}
+  \end{row}
+\end{ptable}
+
+\section{Armas}
+\medskip
+\textarea[lines=4]
+\section{Implantes}
+\medskip
+\textarea[lines=4]
+\section{Notas}
+\medskip
+\textarea[lines=4]
+
+\section{Movimentos}
+\begin[title=DECKER]{move}
+  Seu rig de controle possui um
+  cyberdeck integrado. Quando tentar
+  invadir sistemas digitais, role+TEC.
+  Com 10+, domínio 3. Com 7-9,
+  domínio 2, o mestre aumenta
+  secretamente sua overwatch em
+  2d6, e pode descrever uma
+  complicação. Você pode gastar 1
+  domínio para realizar uma das ações
+  abaixo:
+  \begin{itemize}
+    \item{Marcar um ícone}
+    \item{Bisbilhotar (1 marca)}
+    \item{Editar arquivo (1 marca)}
+    \item{Rastrear dispositivo (2 marcas)}
+    \item{Saltar em Dispositivo (3 marcas)}
+    \item{Controlar dispositivo (1-3 marcas)}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=RIG DE CONTROLE]{move}
+  Esse implante coleta dados de
+  coordenação motora do seu cérebro
+  e expressa eles como comandos
+  para operar máquinas (como drones
+  ou alguns carros modificados). Você
+  pode controlar máquinas que
+  tenham um receptor adequado
+  "mergulhado", movendo sua
+  consciência para a máquina e
+  deixando seu corpo físico
+  desmaiado para trás. Desta maneira,
+  você recebe +1 nos testes
+  relacionados a máquina e -1 em
+  outros testes. Seu carro e drone já
+  possuem um receptor.
+\end{move}
+\medskip
+\begin[title=MOTORIZADO]{move}
+  Você possui um veículo customizado. Primeiro, escolha uma base:
+  \begin{itemize}
+    \item{MOD +1, CAR +1, GLI +0}
+    \item{MOD +1, CAR +2, GLI +1}
+    \item{MOD +2, CAR +1, GLI +1}
+    \item{MOD +2, CAR +2, GLI +2}
+  \end{itemize}
+  \medskip
+  Sublinhe as \strong{Mod}ificações do veículo:
+  \em{Anfíbio, Discreto, Espaço Para Carga, Off-Road, Silencioso, Veloz}
+  \medskip
+  Sublinhe as \strong{Car}acterísticas do veículo:
+  \em{Armas Montadas, Arpão, Nitro, Piloto Automático Avançado, Possuído, Resistente}
+  \medskip
+  Sublinhe os \strong{Gli}tches do veículo:
+  \em{Barulhento, Difícil de Reparar, Lento, Sem Licença, Velho}
+\end{move}
+\medskip
+\begin[title=DRONADO]{move}
+  Você possui um drone que pode ser remotamente controlado ou
+  pilotado por você mesmo. Ele por padrão possui a tag \em{Médio}.
+  Primeiro, escolha uma base:
+  \begin{itemize}
+    \item{CUS +2, ESP +1, GLI +1}
+    \item{CUS +1, ESP +2, GLI +1}
+    \item{CUS +2, ESP +2, GLI +2}
+    \item{CUS +3, ESP +3, GLI +3}
+  \end{itemize}
+  \medskip
+  Sublinhe as \strong{Cus}tomizações do seu drone:
+  \em{Anfíbio, Armado, Escala Superfícies, Minúsculo, Rápido, Voa}
+  \medskip
+  Sublinhe as \strong{Esp}ecialidades do seu drone:
+  \em{Alto-falantes, Ampliação de Imagem, Braço Robótico, Conexão Encriptada, Grappling Hook, Sonar, Sorrateiro, Visão Infravermelha}
+  \medskip
+  Sublinhe os \strong{Gli}tches do seu drone:
+  \em{Chama Atenção, Enorme, Frágil Como Vidro, Lento, Obviamente Ilegal}
+\end{move}
+
+\section{Motivação}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Egoísmo} - Troque um aliado uma vantagem.
+\smallskip
+\choice{Lucros} - Consiga um novo cliente para seu trampo secundário.
+\smallskip
+\choice{Lealdade} - Sofra no lugar de um aliado.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=1]
+
+\section{Antecedentes}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Mecânico} - Reparar veículos e drones é trivial para você.
+\smallskip
+\choice{Corredor} - Você sempre sabe de qualquer evento de racha que role na cidade.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=2]
+
+\section{Flags}
+\tutorial{Escolha ou crie 2.}\par
+\choice{Ardiloso} - Acredite e haja de acordo com uma mentira que eu te contei.
+\smallskip
+\choice{Ganancioso} - Me ofereça uma recompensa monetária para trair um aliado.
+\smallskip
+\choice{Pretensioso} - Contraponha meu conhecimento e prove que eu tenho mais a aprender.
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=3]
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=3]
+
+\end{document}
