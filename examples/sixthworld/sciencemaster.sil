@@ -1,23 +1,6 @@
 \begin[class=sine, papersize=a4, page8orientation=down]{document}
-\language[main=pt]
 
-\use[module=packages.rules]
-\use[module=packages.svg]
-\use[module=packages.ptable]
-\use[module=packages.parbox]
-\use[module=utils]
-
-\font[family=SF Pro Text, size=9pt]
-
-\neverindent
-
-
-\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
-\define[command=choice]{\strong{\svg[src=svg/square.svg, width=0.8em] \process{}}}
-\define[command=marked]{\bigbold{\svg[src=svg/marked.svg, width=0.8em] \process{}}}
-\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
-
-\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/ttf/BebasNeue-Regular.ttf]{\process}}
+\include[src=common.sil]
 
 % Capa
 \fig[src=img/sciencemaster.png, margin-x=0, margin-top=0]
@@ -72,14 +55,9 @@
 \end{move}
 \medskip
 \begin[title=LABORATÓRIO]{move}
-  Quando passar horas em seu
-  laboratório de pesquisas
-  trabalhando com dados, materiais
-  ou evidências, role+TEC. Com 10+,
-  você descobre ou inventa algo
-  grande que ajudará você e seus
-  aliados: nos diga o que é. Com 7-9,
-  escolha 1:
+  Quando passar \strong{horas em seu laboratório de pesquisas trabalhando com dados, materiais ou
+  evidências}, role+TEC. Com 10+, você descobre ou inventa algo grande que ajudará você e seus
+  aliados: nos diga o que é. Com 7-9, escolha 1:
   \begin{itemize}
     \item{Sua pesquisa não foi discreta: alguém percebe o que você está fazendo.}
     \item{Seu trabalho está incompleto: o mestre lhe dirá o que você encontrou.}
@@ -88,18 +66,10 @@
 \end{move}
 \medskip
 \begin[title=PREPARAR SUBSTÂNCIAS]{move}
-  Quando usar ingredientes para
-  montar uma substância alquímica,
-  escolha se seu gatilho será por
-  comando, toque, impacto ou
-  temporizador. Explique o efeito
-  desejado e então monte uma frase
-  usando até 3 descritores de
-  substância que o resuma (o mestre
-  julga se a escolha é adequada).
-  Depois, role+MEN: Com 10+, você
-  prepara a substância com sucesso.
-  Com 7-9, escolha 1:
+  Quando \strong{usar ingredientes para montar uma substância alquímica}, escolha se seu gatilho será
+  por comando, toque, impacto ou temporizador. Explique o efeito desejado e então monte uma frase
+  usando até 3 descritores de substância que o resuma (o mestre julga se a escolha é adequada). Depois,
+  role+MEN: Com 10+, você prepara a substância com sucesso. Com 7-9, escolha 1:
   \begin{itemize}
     \item{A poção é estável e seu tempo de duração é normal.}
     \item{O gatilho dela não foi acidentalmente trocado.}
@@ -108,8 +78,8 @@
 \end{move}
 \medskip
 \begin[title=CITAÇÃO ACADÊMICA]{move}
-  Quando confundir, blefar ou obfuscar usando jargão técnico, role+TEC. Com 10+, sua audiência fica
-  empressionada e inclinada a acreditar em você. Com 7-9, eles ainda não acreditam em você, mas
+  Quando \strong{confundir, blefar ou obfuscar usando jargão técnico}, role+TEC. Com 10+, sua audiência
+  fica empressionada e inclinada a acreditar em você. Com 7-9, eles ainda não acreditam em você, mas
   uma demonstração ou prova concreta certamente os convencerá.
 \end{move}
 

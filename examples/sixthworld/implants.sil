@@ -1,0 +1,131 @@
+\begin[class=sine, papersize=a4]{document}
+
+\include[src=common.sil]
+
+% Capa
+\center{\fig[src=img/implants.png]}
+\bigskip
+\bigskip
+\center{\font[size=24pt, filename=examples/sixthworld/ttf/BlackOpsOne-Regular.ttf]{IMPLANTS}}
+\framebreak
+
+\section{Auriculares}
+
+\begin[title=Ouvidos Modulares, marked=false]{move}
+  Você pode desconectar seus ouvidos de sua cabeça, e elas continuam a transmitir o que ouvem.
+  Você pode ter cada ouvido em um lugar diferente e alternar de qual deles você está recebendo a
+  transmissão de áudio. Se não estiver com nenhum ouvido conectado à sua cabeça, você perde totalmente
+  seu senso de equilíbrio e não consegue sequer andar, tendo que ficar sentado ou imóvel até recuperar
+  pelo menos um ouvido.
+\end{move}
+\medskip
+\begin[title=Gravador, marked=false]{move}
+  Permite que você armazene e transmita tudo que ouve. A qualidade da gravação é básica.
+\end{move}
+\medskip
+\begin[title=Navegação Ultrassom, marked=false]{move}
+  Seus ouvidos emitem pulsos ultrassônicos que rebatem em superfícies e são caputurados por receptores,
+  permitindo que você “veja” na escuridão total. Você também detecta coisas que normalmente não veria,
+  como pessoas sob efeito de um feitiço de invisibilidade.
+\end{move}
+
+\section{Oculares}
+
+\begin[title=Duplicação de Retina, marked=false]{move}
+  Seus olhos podem escanear uma retina e replicá-la. Útil contra sistemas de segurança que usam
+  autenticação por retina. Você também pode baixar dados de alguma retina para que eles a repliquem.
+\end{move}
+\medskip
+\begin[title=Gravador, marked=false]{move}
+  Seus olhos vêm equipados com câmeras que captam, armazenam e transmitem o que você está vendo. A
+  qualidade da gravação é básica.
+\end{move}
+\medskip
+\begin[title=Visão de Calor, marked=false]{move}
+  Receptores de radiação infravermelha em seus olhos te permitem enxergar objetos emanando calor, em
+  tons de roxo e vermelho.
+\end{move}
+\medskip
+\begin[title=Olhos Modulares, marked=false]{move}
+  Você pode desconectar os seus olhos da sua cavidade ocular, e eles continuam a transmitir para você
+  as imagens que capturam. Você pode estar com cada olho em um local e alternar qual das imagens você
+  está recebendo, apesar de ficar com uma noção de profundidade reduzida.
+\end{move}
+\medskip
+\begin[title=Aumento de Magnitude, marked=false]{move}
+  Sua visão pode aumentar seu fator de zoom para até 100x. Você pode perceber a olho nu falhas
+  milimétricas na lapidação de uma joia, ou ler lábios refletidos na retina de alguém conversando
+  do outro lado da rua.
+\end{move}
+\medskip
+\begin[title=Visão Noturna, marked=false]{move}
+  Esta aug permite que você enxergue normalmente em condições com baixíssima iluminação (mas não ajuda
+  em situações sem luz alguma).
+\end{move}
+
+\section{Corporais}
+
+\begin[title=Modulador de Voz, marked=false]{move}
+  Permite que você altere sua voz para soar como a de outra pessoa. Máquinas serão facilmente enganadas,
+  mas você ainda vai precisar fazer um teatrinho caso decida passar a perna em alguém mais esperto que
+  uma tranca eletrônica.
+\end{move}
+\medskip
+\begin[title=Aim Assist, marked=false]{move}
+  Seus braços possuem estabilizadores que compensam movimento e recuo. Duas vezes por sessão, quando
+  \strong{Disparar em algum alvo}, com 7-9 você pode rerolar o teste com -1.
+\end{move}
+\medskip
+\begin[title=Mãos Modulares, marked=false]{move}
+  Esta aug altera suas mãos para que possam ser separadas de seus braços e contiuarem a operar. Você
+  consegue controlá-las individualmente, e ainda sente tudo aquilo que tocam.
+\end{move}
+\medskip
+\begin[title=Pés Ancorados, marked=false]{move}
+  Ferrões se extendem de seus pés e lhe garantem firmeza em sua posição. Quando \strong{sofrer um
+  empurrão ou tentarem te derrubar}, role+COR. Com 7-9, escolha um:
+  \begin{itemize}
+    \item{Você se mantém firme, assim como seu adversário.}
+    \item{Você cai, mas leva seu adversário junto.}
+  \end{itemize}
+  Com 10+, você se mantém firme e escolhe um:
+  \begin{itemize}
+    \item{Você usa o peso de seu adversário para derrubá-lo.}
+    \item{A manobra irresponsável de seu adversário lhe abre uma oportunidade: ataque-o ou
+    marque progresso.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=Pernas Modulares, marked=false]{move}
+  Você pode desconectar suas pernas de seu corpo e elas continuam funcionando, recebendo seus comandos
+  e transmitindo a você tudo o que sentem. Elas caminham em uma espécie de “saltitar” e funcionam
+  independentes uma da outra.
+\end{move}
+\medskip
+\begin[title=Velocidade Biônica, marked=false]{move}
+  Quando \strong{tentar correr a velocidades sobre-humanas}, role+AGI. Com 7-9, você alcança seu objetivo.
+  Com 10+, você também escolhe um:
+  \begin{itemize}
+    \item{Você foi discreto ao correr: seus alvos não o notam se aproximando.}
+    \item{Você consegue pular e agarrar um alvo, derrubando-o.}
+    \item{Você ultrapassa seu alvo.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=Reflexos Implantados, marked=false]{move}
+  Quando \strong{algum aliado rolar um 6-}, você pode descrever como tenta evitar que o teste falhe
+  e marcar uma Debilidade. Se o fizer, role+AGI. Com 10+, as consequências dessa falha são evitadas.
+  Com 7-9, faça como 10+, mas escolha 1:
+  \begin{itemize}
+    \item{Você recebe -2 em seu próximo teste.}
+    \item{Seu aliado recebe -2 em seu próximo teste.}
+  \end{itemize}
+  Com 6-, você se expõe as consequências ou piora a situação. Caso seja salvo, o aliado não marca XP
+  pela falha que ativou esse movimento.
+\end{move}
+
+\framebreak
+
+\backcover
+
+\end{document}

@@ -1,21 +1,6 @@
 \begin[class=sine, papersize=a4]{document}
-\language[main=pt]
 
-\use[module=packages.rules]
-\use[module=packages.svg]
-\use[module=packages.ptable]
-\use[module=utils]
-
-\font[family=SF Pro Text, size=9pt]
-
-\neverindent
-
-\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
-\define[command=choice]{\strong{\svg[src=svg/square.svg, width=0.8em] \process{}}}
-\define[command=marked]{\bigbold{\svg[src=svg/marked.svg, width=0.8em] \process{}}}
-\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
-
-\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/ttf/BebasNeue-Regular.ttf]{\process}}
+\include[src=common.sil]
 
 % Capa
 \fig[src=img/razorgirl.png, margin-x=0, margin-top=0]
@@ -139,18 +124,6 @@
 
 \framebreak
 
-\begin{raggedleft}
-  \begin[size=22pt, filename=examples/sixthworld/ttf/BebasNeue-Regular.ttf]{font}
-    Watch your back\break
-    shoot straight\break
-    conserve ammo\break
-    and never make\break
-    a deal with a\break
-    dragon
-  \end{font}
-\end{raggedleft}
-\bigskip
-\bigskip
-\center{\fig[src=img/shadowrun-logo.png, width=50%fw]}
+\backcover
 
 \end{document}
