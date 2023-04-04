@@ -24,7 +24,12 @@ local enter = function (self, typesetter)
   local angles = {
     right = 90,
     left = -90,
+    down = 0,
   }
+
+  if self.orientation == "down" then
+    return
+  end
 
   -- Swap width and height
   local w = self.constraints["width"]
@@ -54,6 +59,10 @@ local enter = function (self, typesetter)
 end
 local leave = function(self, _)
   if not self.orientation then return end
+
+  if self.orientation == "down" then
+    return
+  end
 
   pdf:grestore()
 
@@ -103,6 +112,15 @@ function class:declareOptions ()
     end
     return SILE.settings:get("sine.margin-mid")
   end)
+
+  for i = 1, 8 do
+    self:declareOption("page"..i.."orientation", function (_, value)
+      if value then
+        SILE.settings:set("sine.page"..i.."orientation", value, true)
+      end
+      return SILE.settings:get("sine.page"..i.."orientation")
+    end)
+  end
 end
 
 function class:declareSettings()
@@ -121,6 +139,19 @@ function class:declareSettings()
     default = SILE.measurement("10mm"),
     help = "Distance between the left frame column and the right frame column",
   })
+
+  for i = 1, 8 do
+    local def = "left"
+    if i >=4 and i ~= 8 then
+      def = "right"
+    end
+    SILE.settings:declare({
+      parameter = "sine.page"..i.."orientation",
+      type = "string",
+      default = def,
+      help = "Orientation of the "..i.."th content frame",
+    })
+  end
 end
 
 function class:registerCommands()
@@ -147,7 +178,7 @@ function class:declareFrames()
       left = "0%pw+"..gutter,
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
-      orientation = "left",
+      orientation = SILE.settings:get("sine.page8orientation"),
     },
     page1 = {
       top = "25%ph+"..gutter.."/2",
@@ -155,7 +186,7 @@ function class:declareFrames()
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
       next = "page2",
-      orientation = "left",
+      orientation = SILE.settings:get("sine.page1orientation"),
     },
     page2 = {
       top = "50%ph+"..gutter.."/2",
@@ -163,7 +194,7 @@ function class:declareFrames()
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
       next = "page3",
-      orientation = "left",
+      orientation = SILE.settings:get("sine.page2orientation"),
     },
     page3 = {
       top = "75%ph+"..gutter.."/2",
@@ -171,7 +202,7 @@ function class:declareFrames()
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
       next = "page4",
-      orientation = "left",
+      orientation = SILE.settings:get("sine.page3orientation"),
     },
     page7 = {
       top = "0%ph+"..gutter.."/2",
@@ -179,7 +210,7 @@ function class:declareFrames()
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
       next = "page8",
-      orientation = "right",
+      orientation = SILE.settings:get("sine.page7orientation"),
     },
     page6 = {
       top = "25%ph+"..gutter.."/2",
@@ -187,7 +218,7 @@ function class:declareFrames()
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
       next = "page7",
-      orientation = "right",
+      orientation = SILE.settings:get("sine.page6orientation"),
     },
     page5 = {
       top = "50%ph+"..gutter.."/2",
@@ -195,14 +226,14 @@ function class:declareFrames()
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
       next = "page6",
-      orientation = "right",
+      orientation = SILE.settings:get("sine.page5orientation"),
     },
     page4 = {
       top = "75%ph+"..gutter.."/2",
       left = "50%pw".."+"..marginMid.."/2",
       width = "50%pw-("..gutter.."+"..marginMid.."/2)",
       height = "25%ph-"..gutter,
-      orientation = "right",
+      orientation = SILE.settings:get("sine.page4orientation"),
       next = "page5",
     },
   }
