@@ -7,8 +7,11 @@ function package:registerCommands()
   self:registerCommand("fig", function (options, _)
     SU.required(options, "src", "including image file")
 
-    local widthMeasure = assert(SU.cast("measurement", options.width or "100%fw"))
+    local widthMeasure = assert(SU.cast("measurement", options.width or 0))
     local heightMeasure = assert(SU.cast("measurement", options.height or 0))
+    if not options.height and not options.width then
+      widthMeasure = assert(SU.cast("measurement", "100%fw")) -- default if none provided
+    end
 
     -- Margins
     -- They should be absolute relating to the frame, so we have to compensate
