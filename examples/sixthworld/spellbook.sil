@@ -11,17 +11,17 @@
 \neverindent
 
 \define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
-\define[command=choice]{\strong{\svg[src=square.svg, width=0.8em] \process{}}}
-\define[command=marked]{\bigbold{\svg[src=marked.svg, width=0.8em] \process{}}}
+\define[command=choice]{\strong{\svg[src=svg/square.svg, width=0.8em] \process{}}}
+\define[command=marked]{\bigbold{\svg[src=svg/marked.svg, width=0.8em] \process{}}}
 \define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
 
-\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{\process}}
+\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/ttf/BebasNeue-Regular.ttf]{\process}}
 
 % Capa
-\fig[src=Pentagram_math.png, margin-x=0, margin-top=0]
+\fig[src=img/Pentagram_math.png, margin-x=0, margin-top=0]
 \bigskip
 \bigskip
-\center{\font[size=24pt, filename=examples/sixthworld/Averia-Bold.ttf]{SPELLBOOK}}
+\center{\font[size=24pt, filename=examples/sixthworld/ttf/Averia-Bold.ttf]{SPELLBOOK}}
 \framebreak
 
 \section{Truques}
@@ -46,7 +46,7 @@
 
 \section{Relógio de Dreno}
 \tutorial{Quando este relógio estiver cheio, esvazie-o e marque uma debilidade.}\par
-\center{\svg[src=4-clock.svg, width=50%fw]}
+\center{\svg[src=svg/4-clock.svg, width=50%fw]}
 
 \framebreak
 

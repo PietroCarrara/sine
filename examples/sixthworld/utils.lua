@@ -39,7 +39,7 @@ function package:registerCommands()
   end)
 
   self:registerCommand("attribute", function (opts, content)
-    local file = assert(io.open(SILE.resolveFile("attribute.svg"), "r"))
+    local file = assert(io.open(SILE.resolveFile("svg/attribute.svg"), "r"))
     local contents = file:read("a")
     file:close()
 
