@@ -1,0 +1,205 @@
+\begin[class=sine, papersize=a4, page8orientation=down]{document}
+\language[main=pt]
+
+\use[module=packages.rules]
+\use[module=packages.svg]
+\use[module=packages.ptable]
+\use[module=packages.parbox]
+\use[module=utils]
+
+\font[family=SF Pro Text, size=9pt]
+
+\neverindent
+
+\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
+\define[command=choice]{\strong{\svg[src=square.svg, width=0.8em] \process{}}}
+\define[command=marked]{\bigbold{\svg[src=marked.svg, width=0.8em] \process{}}}
+\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
+
+\define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{\process}}
+
+% Capa
+\fig[src=sciencemaster.png, margin-x=0, margin-top=0]
+\medskip
+\center{\font[size=18pt, filename=examples/sixthworld/Xolonium-Bold.ttf]{SCIENCEMASTER}}
+\bigskip
+\novbreak
+\bigskip
+\novbreak
+\begin{center}
+\hrule[height=0.5pt, width=66%fw]
+\novbreak
+\smallskip
+\novbreak
+\font[size=7pt]{NOME}
+\end{center}
+
+\section{Habilidades}
+\tutorial{Atribua esses valores às suas habilidades:\par{}16(+2), 15(+1), 13(+1), 12(0), 9(0), 8(-1)}
+\begin[cols=50%fw 50%fw, cellborder=0]{ptable}
+  \begin{row}
+    \cell{\attribute[name=Corpo, mod=COR, condition=Ferida]}
+    \cell{\attribute[name=Agilidade, mod=AGI, condition=Trêmulo]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Mente, mod=MEN, condition=Confuso]}
+    \cell{\attribute[name=Tecnologia, mod=TEC, condition=Quebrado]}
+  \end{row}
+  \begin{row}
+    \cell{\attribute[name=Espírito, mod=ESP, condition=Desolado]}
+    \cell{\attribute[name=Edge, mod=EDG, condition=Abalado]}
+  \end{row}
+\end{ptable}
+
+\section{Armas}
+\medskip
+\textarea[lines=4]
+\section{Feitiços/Implantes}
+\medskip
+\textarea[lines=4]
+\section{Notas}
+\medskip
+\textarea[lines=4]
+
+\section{Movimentos}
+\begin[title=ÁREA DE EXPERTISE]{move}
+  Sublinhe uma área de especialização. Quando \strong{observar algo relacionado a ela}, role+MEN.
+  Com 10+, nos conte que informação útil você sabe sobre isso. Com 7-9, o mestre lhe dirá alguma
+  curiosidade: cabe a você torná-la útil.
+  \smallskip
+  \em{História Corporativa, Botânica Desperta, Cibernética Aplicada, Teoria Mágica Universal}
+\end{move}
+\medskip
+\begin[title=LABORATÓRIO]{move}
+  Quando passar horas em seu
+  laboratório de pesquisas
+  trabalhando com dados, materiais
+  ou evidências, role+TEC. Com 10+,
+  você descobre ou inventa algo
+  grande que ajudará você e seus
+  aliados: nos diga o que é. Com 7-9,
+  escolha 1:
+  \begin{itemize}
+    \item{Sua pesquisa não foi discreta: alguém percebe o que você está fazendo.}
+    \item{Seu trabalho está incompleto: o mestre lhe dirá o que você encontrou.}
+    \item{Houve um acidente: Marque a debilidade Quebrado (TEC).}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=PREPARAR SUBSTÂNCIAS]{move}
+  Quando usar ingredientes para
+  montar uma substância alquímica,
+  escolha se seu gatilho será por
+  comando, toque, impacto ou
+  temporizador. Explique o efeito
+  desejado e então monte uma frase
+  usando até 3 descritores de
+  substância que o resuma (o mestre
+  julga se a escolha é adequada).
+  Depois, role+MEN: Com 10+, você
+  prepara a substância com sucesso.
+  Com 7-9, escolha 1:
+  \begin{itemize}
+    \item{A poção é estável e seu tempo de duração é normal.}
+    \item{O gatilho dela não foi acidentalmente trocado.}
+    \item{Não há efeitos colaterais ao fabricar ou utilizar a substância.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=CITAÇÃO ACADÊMICA]{move}
+  Quando confundir, blefar ou obfuscar usando jargão técnico, role+TEC. Com 10+, sua audiência fica
+  empressionada e inclinada a acreditar em você. Com 7-9, eles ainda não acreditam em você, mas
+  uma demonstração ou prova concreta certamente os convencerá.
+\end{move}
+
+\section{Motivação}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Dívidas} - Venda algo importante para você.
+\smallskip
+\choice{Conhecimento} - Perca seu foco do objetivo principal para pesquisar outra coisa.
+\smallskip
+\choice{Vício} - Deixe um vício atrapalhar sua missão.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=1]
+
+\section{Antecedentes}
+\tutorial{Escolha ou crie 1.}\par
+\choice{Acadêmico} - Você é próximo de diversos cientistas renomados da academia.
+\smallskip
+\choice{Criminoso} - Você fazia drogas para um cartel. Esse passado te ajuda tanto quanto atrapalha.
+\smallskip
+\choice{\hrulefill}
+\medskip
+\textarea[lines=2]
+
+\section{Flags}
+\tutorial{Escolha ou crie 2.}\par
+\choice{Apreensivo} - Me confie com algo importante que provavelmente vou quebrar.
+\smallskip
+\choice{Deselegante} - Me inclua em uma situação social que devo estragar com grosserias.
+\smallskip
+\choice{Traiçoeiro} - Acredite e haja de acordo com uma mentira que eu lhe contei.
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=3]
+\smallskip
+\choice{\hrulefill}
+\novbreak
+\medskip
+\novbreak
+\textarea[lines=3]
+
+\framebreak
+
+\center{\font[size = 17pt, filename=examples/sixthworld/BebasNeue-Regular.ttf]{DESCRITORES DE SUBSTÂNCIAS}}
+\bigskip
+\begin[width=33%fw]{parbox}
+  \em{Verbos}
+  \par
+  \begin{itemize}
+    \item{Copiar}
+    \item{Criar}
+    \item{Derreter}
+    \item{Diminuir}
+    \item{Embaralhar}
+    \item{Fortalecer}
+    \item{Remover}
+    \item{Sugar}
+  \end{itemize}
+\end{parbox}
+\begin[width=33%fw]{parbox}
+  \em{Adjetivos}
+  \par
+  \begin{itemize}
+    \item{Agradável}
+    \item{Amigável}
+    \item{Brilhante}
+    \item{Diferente}
+    \item{Frágil}
+    \item{Grande}
+    \item{Irritante}
+    \item{Terrível}
+  \end{itemize}
+\end{parbox}
+\begin[width=33%fw]{parbox}
+  \em{Substantivos}
+  \par
+  \begin{itemize}
+    \item{Buraco}
+    \item{Explosão}
+    \item{Memória}
+    \item{Músculo}
+    \item{Reparo}
+    \item{Ruído}
+    \item{Sono}
+    \item{Voz}
+  \end{itemize}
+\end{parbox}
+
+
+\end{document}
