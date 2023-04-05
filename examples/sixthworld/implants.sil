@@ -1,4 +1,4 @@
-\begin[class=sine, papersize=a4]{document}
+\begin[class=sine, papersize=a4, markings=false]{document}
 
 \include[src=common.sil]
 

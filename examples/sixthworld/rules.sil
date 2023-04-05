@@ -1,0 +1,119 @@
+\begin[class=sine, papersize=a4, markings=false]{document}
+
+\include[src=common.sil]
+
+% Capa
+\fig[src=img/rules.png, margin-x=0, margin-top=0]
+\bigskip
+\center{\font[size=24pt, filename=examples/sixthworld/ttf/BlackOpsOne-Regular.ttf]{RULES}}
+\framebreak
+
+\section{Movimentos Especiais}
+
+\begin[title=CONSULTAR INVENTÁRIO]{move}
+  Quando \strong{procurar algo em seu inventário}, role+Inventário. Você começa cada sessão com 1
+  Inventário. Com 10+, descreva por que você tinha consigo o item que queria. Com 7-9, escolha 1:
+  \begin{itemize}
+    \item{Gaste 1 Inventário para fazer como 10+.}
+    \item{Você encontra tem o item, mas ele está danificado ou funcionando mal.}
+    \item{Você não encontra exatamente o que queria, mas algo parecido.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=AJUDAR//INTERFERIR]{move}
+  Quando quiser ajudar ou atrapalhar alguém, descreva como faz isso e role com o modificador do atributo
+  adequado. Com 10+, aquele personagem recebe +1 ou -2, à sua escolha, em sua rolagem. Com 7-9,
+  os modificadores ainda são aplicados, mas você também se expõe ao perigo, retribuição, ou
+  custo de sua ação.
+\end{move}
+\medskip
+\begin[title=IMPROVISAR EM GRUPO]{move}
+  Quando \strong{Improvisarem em grupo}, descrevam individualmente suas ações e cada um rola usando o
+  modificador do atributo mais adequado. Com 6-, você se meteu em encrenca: descreva como isso
+  aconteceu. Com 7-9, você se saiu bem. Com 10+, você se saiu tão bem que consegue tirar alguém de um
+  problema, se puder descrever como faz isso. Você não marca XP se rolar um 6- e for salvo.
+\end{move}
+\medskip
+\begin[title=LISTA DE CONTATOS]{move}
+  Quando \strong{procurar contatar alguém que conheça}, descreva esse contato e role+EDG. Com 10+,
+  escolha 2. Com 7-9, escolha 1:
+  \begin{itemize}
+    \item{Você não deve um favor ao contato.}
+    \item{O contato não está envolvido em nenhuma encrenca.}
+    \item{O contato não possui um segredo perigoso.}
+  \end{itemize}
+  Com 6-, seu contato não quer te ver por um tempo, e não vai atender chamadas ou se encontrar com você.
+  Falhas repetidas deste movimento podem danificar a relação entre vocês.
+\end{move}
+\medskip
+\begin[title=AVANÇAR DE NÍVEL]{move}
+  Quando vocês estiverem em inatividade (por horas ou dias) e TODOS possuírem uma quantidade
+  de XP igual (ou superior) ao seu nível atual + 7, vocês poderão refletir a respeito de suas
+  experiências e aperfeiçoar suas habilidades. Subtraia seu nível atual+7 de seu XP, aumente
+  seu nível em 1, e escolha 2:
+  \begin{itemize}
+    \item{Receba uma nova Aug.}
+    \item{Marque uma tag a mais em uma Arma.}
+    \item{Escolha um novo movimento avançado de sua classe.}
+    \item{Aumente um atributo seu em 1 ponto.}
+  \end{itemize}
+  Vocês podem transferir pontos de XP livremente entre si.
+\end{move}
+\medskip
+\begin[title=ENCERRAR SESSÃO]{move}
+  Quando \strong{chegar ao final da sessão}, se você ativou flags de outros personagens pelo menos uma
+  vez, marque XP. Se algum personagem ativou uma flag sua pelo menos uma vez, marque XP. Agora, observe
+  seu alinhamento. Caso tenha agido de acordo com ele pelo menos uma vez (totalmente à seu critério),
+  marque XP. Em seguida, os jogadores devem responder às questões abaixo coletivamente:
+  \begin{itemize}
+    \item{Trabalhamos bem em conjunto?}
+    \item{Irritamos/enfraquecemos alguma corporação?}
+    \item{Conseguimos uma boa recompensa por nosso trabalho?}
+  \end{itemize}
+  Para cada resposta “sim”, todos marcam XP.
+\end{move}
+\medskip
+\begin[title=FLATLINE]{move}
+  Quando \strong{tiver 4 ou mais Debilidades marcadas}, você está morrendo. Descreva que memórias passam
+  por seus olhos e role+Nada. Com 10+, suas memórias lhe ajudam a resistir: continua em uma situação
+  difícil, mas não está morto. Com 7-9, você se lembra que tudo tem um preço: Quando acordar novamente,
+  estará em uma sala de cirurgia. Descreva quem lhe salvou: você lhes deve algo grande. Se quem lhe
+  salvou não foi uma corporação, descreva também uma complicação da cirurgia.
+\end{move}
+
+\section{Armas}
+
+\begin{itemize}
+  \item{\strong{Discreta}: Essa arma pode ser facilmente escondida.}
+  \item{\strong{Desmontável}: Essa arma pode ser rapidamente desmontada e remontada em peças menores.}
+  \item{\strong{Imune à Detectores}: Detectores de metal não detectam essa arma.}
+  \item{\strong{Estraçalhadora}: Corpos mortos por essa arma ficam irreconhecíveis.}
+  \item{\strong{Ágil}: Sacar e manusear essa arma é uma ação fácil e rápida.}
+  \item{\strong{Permissão do Dono}: Essa arma só funciona quando detectar que você é quem a está usando.}
+  \item{\strong{Munição Alternativa}: Essa arma pode disparar, além de sua munição normal, dardos de injeção com uma dose de alguma droga, toxina ou substância.}
+  \item{\strong{Smart}: Todas as funcionalidades dessa arma podem ser ativadas remotamente (inclusive a de disparar).}
+  \item{\strong{Aquática}: Esta arma funciona bem mesmo debaixo d'água.}
+  \item{\strong{EPM}: Essa arma não afeta seres vivos, mas danifica equipamentos eletrônicos.}
+  \item{\strong{Automática}: Essa arma dispara vários projéteis consecutivos.}
+  \item{\strong{Medidor de Distância}: Essa arma é capaz de medir a distância até seu alvo.}
+  \item{\strong{Silenciosa}: Essa arma quase não faz barulho ao ser disparada.}
+  \item{\strong{Marcador de Acerto}: Essa arma informa ao usuário quando seu alvo é atingido.}
+  \item{\strong{Longo Alcance}: Essa arma foi feita para acertar alvos de longas distâncias.}
+  \item{\strong{Coletor de DNA}: Essa arma coleta DNA ao atingir um alvo, e transmite os dados para seu usuário.}
+  \item{\strong{Incendiária}: Alvos atingidos por essa arma têm chances de entrarem em combustão.}
+  \item{\strong{Integrada}: A arma está instalada no próprio corpo de seu usuário.}
+  \item{\strong{Explosiva}: Essa arma causa dano à vários alvos próximos através de barulhentas e destrutivas explosões.}
+\end{itemize}
+
+\section{Debilidades}
+
+\begin{itemize}
+  \item{\strong{Furiosa (COR):} Quebre algo importante para você ou desconte sua raiva em um aliado.}
+  \item{\strong{Trêmula (DES):} Atrase ou atrapalhe algum esforço em equipe.}
+  \item{\strong{Confusa (MEN):} Aja de maneira tola sem avisar seus aliados.}
+  \item{\strong{Quebrada (TEC):} Algum equipamento seu mostra um defeito na hora H.}
+  \item{\strong{Desolada (ESP):} Deixe algum aliado na mão ao fugir de algum perigo ou dificuldade.}
+  \item{\strong{Abalada (EDG):} Diga ou deixe escapar algo que transforme uma situação tranquila em uma problemática.}
+\end{itemize}
+
+\end{document}

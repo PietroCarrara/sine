@@ -1,0 +1,143 @@
+\begin[class=sine, papersize=a4, markings=false]{document}
+
+\include[src=common.sil]
+
+% Capa
+\fig[src=img/moves.png, margin-x=0, margin-top=0]
+\bigskip
+\center{\font[size=24pt, filename=examples/sixthworld/ttf/BlackOpsOne-Regular.ttf]{MOVIMENTOS}}
+\framebreak
+
+\section{Movimentos}
+
+\begin[title=DISPARAR (AGI)]{move}
+  Quando \strong{mirar e disparar uma arma contra um adversário à distância}, role+AGI. Com 10+
+  você conseguiu um tiro preciso: elimine seu oponente. Com 7-9, elimine-o e escolha 1:
+  \begin{itemize}
+    \item{Você foi forçado a se mover para conseguir uma linha de tiro. O mestre descreve o perigo
+    em que você se meteu fazendo isso.}
+    \item{Você perdeu algo importante, como sua vantagem por estar escondido, seu controle da situação,
+    ou algum objeto de valor.}
+    \item{Alguém que você não esperava percebe que seu alvo foi eliminado.}
+    \item{Você hesita ou perde a oportunidade de fazer seu disparo: a partir de agora, algo
+    impossibilita que você atire em seu alvo novamente, como ele ter saído de seu campo de visão ou
+    ter terminado de vestir sua armadura.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=DISPARO EM COMBATE]{move}
+  Ao \strong{mirar e disparar uma arma à distância quando estiver em combate}, role+AGI. Com 12+,
+  avance o relógio em 4 e escolha 1. Com 10+, avance o relógio em 2 e escolha 1:
+  \begin{itemize}
+    \item{Esconda-se depois dos tiros, ou mantenha sua posição um segredo.}
+    \item{Você dispara várias vezes, forçando seus alvos a recuarem ou procurarem cobertura.}
+    \item{Você atinge alguma estrutura crítica, como um barril de óleo, canos pressurizados, etc.}
+  \end{itemize}
+  Com 7-9, marque uma condição, avance o relógio em 2 e escolha 1:
+  \begin{itemize}
+    \item{Nenhum oponente te surpreende pelas costas.}
+    \item{Você não teve que se expor ao perigo para conseguir uma linha de tiro.}
+    \item{Sua cobertura ou terreno não são destruídos.}
+  \end{itemize}
+  Seus oponentes podem se aproveitar de algo que você não escolheu.
+\end{move}
+\medskip
+\begin[title=GOLPEAR (COR)]{move}
+  Quando \strong{atacar um adversário em proximidade corpo-a-corpo}, role+COR. Com 10+, escolha 3. Com
+  7-9, escolha 2. Com 6-, escolha 1:
+  \begin{itemize}
+    \item{Você consegue eliminar seu oponente.}
+    \item{Você ataca silenciosamente.}
+    \item{Você não se fere no processo.}
+    \item{Você conquista uma vantagem tática.}
+  \end{itemize}
+  Seu oponente irá tirar vantagem
+  daquilo que você não escolher.
+\end{move}
+\medskip
+\begin[title=GOLPE EM COMBATE]{move}
+  Quando \strong{atacar um oponente em proximidade corpo-a-corpo enquanto estiver em combate}, role+COR.
+  Com 12+, avance o relógio em 4 e escolha 1. Com 10+, avance o relógio em 2 e escolha 1:
+  \begin{itemize}
+    \item{Você modifica o terreno para garantir uma vantagem.}
+    \item{Você abre caminho por uma multidão.}
+    \item{Você atrai a atenção de oponentes que estejam ameaçando um aliado.}
+  \end{itemize}
+  Com 7-9, marque uma condição, avance o relógio em 2 e escolha 1:
+  \begin{itemize}
+    \item{Você não foi derrubado.}
+    \item{Você consegue impedir que eles avancem.}
+    \item{Eles não tiram nada de você.}
+  \end{itemize}
+  Seus oponentes podem se aproveitar de algo que você não escolheu.
+\end{move}
+\medskip
+\begin[title=ANALISAR (MEN)]{move}
+  Quando \strong{inspecionar cuidadosamente uma situação ou local}, role+MEN. Com 10+, faça ao mestre 2
+  das perguntas listadas abaixo. Com um 7-9, faça 1. Receba +1 quando agir de acordo com as respostas:
+  \begin{itemize}
+    \item{O que aconteceu aqui recentemente?}
+    \item{O que está para acontecer aqui agora?}
+    \item{Qual a minha melhor rota de entrada/escape?}
+    \item{Como posso evitar problemas/me esconder aqui?}
+    \item{O que não é realmente o que parece aqui?}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=GAMBIARRAR (TEC)]{move}
+  Quando \strong{tentar alterar o funcionamento de algum equipamento}, role +TEC. Com 10+, suas
+  alterações funcionam perfeitamente. Com 7-9, elas funcionam, mas com um problema:
+  \begin{itemize}
+    \item{Elas são temporárias. Em breve o equipamento voltará ao normal ou se desligará totalmente.}
+    \item{Você perdeu algo importante, como o tempo ou suas ferramentas.}
+    \item{Suas alterações chamam a atenção de alguém inesperado.}
+    \item{Suas alterações surtem um efeito muito maior ou menor que o esperado.}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=NEGOCIAR (EDG)]{move}
+  Quando \strong{negociar, mentir ou intimidar NPCs}, role+EDG. Com 10+, sua sugestão é tentadora
+  até que o contrário seja provado. Com 7-9, você precisa embasar suas palavras com garantias sólidas
+  ou provas concretas.
+\end{move}
+\medskip
+\begin[title=OLHAR NA ALMA (ESP)]{move}
+  Quando \strong{estudar cuidadosamente uma pessoa ou um grupo}, role+ESP. Com 10+, faça ao mestre 2
+  das perguntas abaixo. Com 7-9, faça 1. Receba +1 quando agir de acordo com as respostas:
+  \begin{itemize}
+    \item{Como posso levá-los a fazer \hrule[height=0.5pt, width=3em]?}
+    \item{Eles estão mentindo?}
+    \item{O que eles estão sentindo?}
+    \item{O que eles gostariam que fizéssemos?}
+    \item{O que eles pretendem fazer?}
+  \end{itemize}
+\end{move}
+\medskip
+\begin[title=IMPROVISAR]{move}
+  Quando \strong{encarar o perigo ou agir sob pressão}, diga como lidará com a situação e role,
+  se o fizer...
+  \begin{itemize}
+    \item{à força ou resistindo fisicamente, +COR;}
+    \item{agindo rápido ou furtivamente, +AGI;}
+    \item{com pensamento rápido ou seu conhecimento, +MEN;}
+    \item{sendo mais máquina que humano, +TEC;}
+    \item{com sua conexão com o sobrenatural, +ESP;}
+    \item{usando charme e trato social, +EDG.}
+  \end{itemize}
+  Com 10+, realize o que pretendia sem ser afetado pela ameaça. Com 7-9, você tropeça, hesita, ou se
+  contorce: o mestre lhe oferecerá um resultado pior, uma barganha difícil ou uma escolha desagradável.
+\end{move}
+\begin[title=ENCERRAR COMBATE]{move}
+  Quando \strong{realizar uma ação decisiva no combate}, você pode tentar encerrá-lo. Role+Relógios:
+  Com 10+, vocês venceram. Os oponentes são mortos, capturados, fogem ou se rendem, de acordo com a
+  situação e suas intenções. Com 7-9, faça como 10+, mas escolha 1:
+  \begin{itemize}
+    \item{Vocês se feriram durante o combate: Todos marcam uma condição.}
+    \item{Sua vitória tem vida curta: outros oponentes aparecem, ou um perigo existente piora.}
+    \item{Tudo tem um preço: Vocês perdem algo de grande valor.}
+    \item{Um objetivo se torna impossível de completar.}
+  \end{itemize}
+  Com 6-, vocês perderam essa luta, e pagarão o preço.
+\end{move}
+
+\end{document}
