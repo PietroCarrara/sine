@@ -8,6 +8,8 @@ class.defaultFrameset = {} -- See class:declareFrames()
 class.firstContentFrame = "page1"
 
 local function markings()
+  if not SILE.settings:get("sine.markings") then return end
+
   local page = assert(SILE.getFrame("page"))
 
   local w = page:width()
@@ -113,6 +115,13 @@ function class:declareOptions ()
     return SILE.settings:get("sine.margin-mid")
   end)
 
+  self:declareOption("markings", function (_, value)
+    if value then
+      SILE.settings:set("sine.markings", value, true)
+    end
+    return SILE.settings:get("sine.markings")
+  end)
+
   for i = 1, 8 do
     self:declareOption("page"..i.."orientation", function (_, value)
       if value then
@@ -138,6 +147,13 @@ function class:declareSettings()
     type = "measurement",
     default = SILE.measurement("10mm"),
     help = "Distance between the left frame column and the right frame column",
+  })
+
+  SILE.settings:declare({
+    parameter = "sine.markings",
+    type = "boolean",
+    default = true,
+    help = "Markings separating content frames",
   })
 
   for i = 1, 8 do
