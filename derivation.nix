@@ -6,15 +6,32 @@
 , lua
 , sile
 , inkscape
+, fontconfig
+, makeFontsConf
+, makeFontsCache
 }:
 
 let
+  fonts = stdenv.mkDerivation {
+    pname = "fonts";
+    version = "0.0.0";
+    dontConfigue = true;
+    src = ./examples/sixthworld/ttf;
+    installPhase = ''
+      runHook preInstall
+      install -Dm644 ./*.otf -t $out/share/fonts/opentype
+      install -Dm644 ./*.ttf -t $out/share/fonts/truetype
+      runHook postInstall
+    '';
+  };
   silex = lua.pkgs.buildLuarocksPackage {
     pname = "silex.sile";
     version = "0.2.0-1";
-    src = fetchurl {
-      url = "https://github.com/Omikhleia/silex.sile/archive/refs/tags/v0.2.0.zip";
-      hash = "sha256-Zo/a9Fr0a0bomgka2sA+c33rpzVlwJSTfjAa9aPYS5k=";
+    src = fetchFromGitHub {
+      owner = "Omikhleia";
+      repo = "silex.sile";
+      rev = "v0.2.0";
+      sha256 = "sha256-8sGrFvKIpcSmAxmFjp1rpu+YkRFQnDDRm0bVKL83rQc=";
     };
   };
   ptable = lua.pkgs.buildLuarocksPackage {
@@ -42,6 +59,10 @@ rec {
 
   src = ./.;
 
+  fontsConf = makeFontsConf {
+    fontDirectories = [ fonts ];
+  };
+
   buildInputs = [
     lua
     inkscape
@@ -51,6 +72,7 @@ rec {
   shellHook = ''
     export LUA_CPATH="${lib.strings.concatStringsSep ";" ((map lua.pkgs.getLuaCPath lua-pkgs) ++ lua.LuaCPathSearchPaths)}"
     export LUA_PATH="${lib.strings.concatStringsSep ";" ((map lua.pkgs.getLuaPath lua-pkgs) ++ lua.LuaPathSearchPaths)}"
+    export FONTCONFIG_FILE="${fontsConf}"
   '';
 
   buildPhase = ''
@@ -62,6 +84,7 @@ rec {
     sile examples/sixthworld/razorgirl.sil
     sile examples/sixthworld/rules.sil
     sile examples/sixthworld/sciencemaster.sil
+    sile examples/sixthworld/samurai.sil
     sile examples/sixthworld/spellbook.sil
     sile examples/sixthworld/spellweaver.sil
   '';
