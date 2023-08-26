@@ -7,14 +7,14 @@
 \use[module=packages.ptable]
 \use[module=utils]
 
-\font[family=SF Pro Text, size=9pt]
+\font[filename=examples/sixthworld/ttf/SF-Pro-Text-Regular.otf, size=9pt]
 
 \neverindent
 
-\define[command=bigbold]{\font[size=11pt, weight=700]{\process{}}}
+\define[command=bigbold]{\font[filename=examples/sixthworld/ttf/SF-Pro-Text-Bold.otf, size=11pt, weight=700]{\process{}}}
 \define[command=choice]{\strong{\svg[src=svg/square.svg, width=0.8em] \process{}}}
 \define[command=marked]{\bigbold{\svg[src=svg/marked.svg, width=0.8em] \process{}}}
-\define[command=tutorial]{\font[size = 8pt, style=italics]{\process{}}}
+\define[command=tutorial]{\font[filename=examples/sixthworld/ttf/SF-Pro-Text-RegularItalic.otf, size = 8pt, style=italics]{\process{}}}
 
 \define[command=sine.section-font]{\font[size = 17pt, filename=examples/sixthworld/ttf/BebasNeue-Regular.ttf]{\process}}
 
