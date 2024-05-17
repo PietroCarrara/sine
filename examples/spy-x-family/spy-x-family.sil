@@ -1,0 +1,63 @@
+\begin[class=sine, papersize=a4, markings=false]{document}
+
+\font[filename=examples/spy-x-family/ttf/TT2020StyleG-Regular.ttf, size=9pt]
+
+\use[module=packages.lorem]
+\use[module=packages.color]
+
+\define[command=thisgame]{\color[color=#610a10]{SPY}x\color[color=#57675c]{FAMILY}}
+\define[command=thespy]{\color[color=#8da99b]{O ESPIÃO}}
+\define[command=theassassin]{\color[color=#610a10]{A ASSASSINA}}
+\define[command=theesper]{\color[color=#fab3ad]{A ESPER}}
+\define[command=attheesper]{\color[color=#fab3ad]{NA ESPER}}
+\define[command=partners]{PARCEIROS}
+\define[command=family]{FAMÍLIA}
+\define[command=attrspy]{\color[color=#610a10]{SPY}}
+\define[command=attrfam]{\color[color=#57675c]{FAMILY}}
+\define[command=findout]{DESCOBRIR O QUE ACONTECE}
+\define[command=gm]{MESTRE}
+
+\section{PREMISSA}
+
+Em \thisgame, um de vocês será \thespy{}: um agente secreto de um governo extrangeiro cumprindo missões para
+manter a paz entre as suas nações. Outra de vocês será \theassassin{}: Uma criminosa letal que mata a mando de
+um empregador sinistro. Vocês dois são \partners, e estão numa relação para manter suas identidades verdadeiras
+escondidas do mundo e de si mesmos. Para melhorar o disface de família normal, vocês adotaram \theesper{}: Uma
+criança com habilidades sobrenaturais, que deve mantê-las em segredo para não ser mandada de volta para o orfanato.
+Ela conhece a verdadeira identidade dos \partners, mas os \partners não conhecem os segredos de ninguém da \family.
+
+\section{REGRAS}
+
+Seu personagem tem dois atributos: \attrspy e \attrfam. Você usará \attrspy para fazer coisas relacionadas a sua
+identidade secreta, e \attrfam para todo o resto.
+Ambos são descritos por um número inteiro que vai de 1 a 6, e começam em 3. Quando fizer uma ação e vocês quiserem
+\findout (ao invés de já saberem o resultado de antemão), escolha o atributo apropriado e role 1d6. Se você tem a
+vantagem por qualquer motivo (experiência, preparo, posição…), role mais um dado e esolha o menor dos dois. Se o
+resultado for menor ou igual ao atributo escolhido, você é bem-sucedido. Do contrário, o \gm descreve como a situação
+se complica pra você e sua \family.
+
+\subsection{EQUILIBRANDO \thisgame}
+
+Quando for bem-sucedido em um teste de \attrspy, mova 1 ponto de \attrfam para \attrspy.
+
+Quando for bem-sucedido em um teste de \attrfam, mova 1 ponto de \attrspy para \attrfam.
+
+Você pode mover um ponto de \attrspy para \attrfam pedindo para que os jogadores da \family descrevam para você uma
+lembrança de algo que vocês fizeram antes em família.
+
+Você pode mover um ponto de \attrfam para \attrspy ao descrever aos jogadores (mas não aos personagens!) que você
+veio aqui por outros motivos TODO: PENSAR MELHOR AQUI. COMO FAZER ISSO SER UTILIZÁVEL VÁRIAS VEZES NUMA MESMA SESSÃO?
+
+\subsection{DESEQUILÍBRIO \thisgame}
+
+\strong{Quando tiver 6 pontos em \attrspy}, você negligenciou sua \family e eles estão preocupados. Descreva come eles
+te econtram na sua situação atual e bole uma desculpa esfarrapada que, de algum geito, eles acreditam (mas que ainda
+levanta suspeitas!). Depois, sente um pouco no banco do carona e deixe os outros pilotarem a história por enquanto.
+Reinicie seus atributos para 3.
+
+\strong{Quando tiver 6 pontos em \attrfam}, você começou a se acostumar com essa vida, e RELAXOU. Descreva um perigo
+iminente para a \family que você poderia ter avistado se estivesse mais atento (não necessáriamente um perigo físico:
+algo que afete a unidade da \family é um melhor ainda!). Fica a critério do mestre decidir como usá-lo. Reinicie
+seus atributos para 3.
+
+\end{document}

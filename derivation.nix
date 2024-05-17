@@ -78,6 +78,7 @@ rec {
   buildPhase = ''
     ${shellHook}
 
+    sile examples/spy-x-family/spy-x-family.sil
     sile examples/sixthworld/dronejockey.sil
     sile examples/sixthworld/implants.sil
     sile examples/sixthworld/moves.sil
