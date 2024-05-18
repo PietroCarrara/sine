@@ -4,6 +4,7 @@
 
 \use[module=packages.lorem]
 \use[module=packages.color]
+\use[module=packages.rotate]
 
 \define[command=thisgame]{\color[color=#610a10]{SPY}x\color[color=#57675c]{FAMILY}}
 \define[command=thespy]{\color[color=#8da99b]{O ESPIÃO}}
@@ -16,6 +17,35 @@
 \define[command=attrfam]{\color[color=#57675c]{FAMILY}}
 \define[command=findout]{DESCOBRIR O QUE ACONTECE}
 \define[command=gm]{MESTRE}
+\define[command=topsecret]{\color[color=#c8102e]{TOP SECRET}}
+
+\begin{center}
+  \bigskip
+  \font[size=18pt]{\thisgame}
+  \bigskip
+  \bigskip
+  \font[size=14pt]{\rotate[angle=-10]{\topsecret}}
+  \bigskip
+  \bigskip
+\end{center}
+\begin{raggedright}
+DOSSIÊ DA OPERAÇÃO ***
+
+ALVO: ***
+
+SIGILO: MÁXIMO
+
+PERIGO: MÁXIMO
+
+RISCO: MÁXIMO
+
+COMPLEXIDADE: MÁXIMA
+
+DIFICULDADE: MÁXIMA
+
+IMPORTÂNCIA: MÁXIMA
+\end{raggedright}
+\framebreak
 
 \section{PREMISSA}
 
@@ -42,22 +72,35 @@ Quando for bem-sucedido em um teste de \attrspy, mova 1 ponto de \attrfam para \
 
 Quando for bem-sucedido em um teste de \attrfam, mova 1 ponto de \attrspy para \attrfam.
 
-Você pode mover um ponto de \attrspy para \attrfam pedindo para que os jogadores da \family descrevam para você uma
-lembrança de algo que vocês fizeram antes em família.
+Você pode mover um ponto de \attrspy para \attrfam ao descrever como algum (ou todos) dos membros da \family aparecem
+em um momento inconveniente para sua identidade secreta.
 
-Você pode mover um ponto de \attrfam para \attrspy ao descrever aos jogadores (mas não aos personagens!) que você
-veio aqui por outros motivos TODO: PENSAR MELHOR AQUI. COMO FAZER ISSO SER UTILIZÁVEL VÁRIAS VEZES NUMA MESMA SESSÃO?
+Você pode mover um ponto de \attrfam para \attrspy ao descrever um flashback de como você se preparou para a cena atual
+por possuir objetivos secretos (se ainda não possuir um objetivo secreto nesta cena, estabeleça um).
 
 \subsection{DESEQUILÍBRIO \thisgame}
 
 \strong{Quando tiver 6 pontos em \attrspy}, você negligenciou sua \family e eles estão preocupados. Descreva come eles
-te econtram na sua situação atual e bole uma desculpa esfarrapada que, de algum geito, eles acreditam (mas que ainda
-levanta suspeitas!). Depois, sente um pouco no banco do carona e deixe os outros pilotarem a história por enquanto.
-Reinicie seus atributos para 3.
+se envolvem na sua situação atual e arriscam perceber sua identidade secreta. Bole uma desculpa esfarrapada que, de
+algum jeito, eles acreditam (mas que ainda levanta suspeitas)! Reinicie seus atributos para 3.
 
 \strong{Quando tiver 6 pontos em \attrfam}, você começou a se acostumar com essa vida, e RELAXOU. Descreva um perigo
 iminente para a \family que você poderia ter avistado se estivesse mais atento (não necessáriamente um perigo físico:
-algo que afete a unidade da \family é um melhor ainda!). Fica a critério do mestre decidir como usá-lo. Reinicie
-seus atributos para 3.
+algo que ameaçe a unidade da \family é melhor ainda)! Reinicie seus atributos para 3.
+
+\section{NARRANDO}
+
+Cenas casuais como um passeio no parque ou uma ida ao mercado podem rápidamente deixar jogadores entediados. Por isso,
+lembre-se que a vida da família apenas PARECE normal. Sempre há algo acontecendo por debaixo dos panos, e até as coisas
+mais mundanas escondem segredos.
+
+Lembre-se: as rolagens de dados importam. Elas só devem ser usadas quando vocês estão curiosos para saber como uma
+situação se desenrola. Se já sabem de antemão como querem que ela seja, não precisam usar os dados. Usem eles apenas
+em momentos achem mais divertido do que continuar a narrar os acontecimentos.
+
+Outra coisa: as falhas nos testes não significam necessáriamente que a personagem em si falhou: apenas que as coisas se
+complicam. Antes que \thespy falhasse em destrancar a porta, a sala que ela dava acesso estava vazia; mas depois da
+falha dele, ela estava repleta de agentes inimigos! Ou \theesper falhando em colar numa prova ao ler as mentes de seus
+pode significar que ela escolheu justo aquele aluno que estava super confiante ao chutar tudo.
 
 \end{document}
