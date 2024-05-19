@@ -11,6 +11,7 @@
 \define[command=theassassin]{\color[color=#610a10]{A ASSASSINA}}
 \define[command=theesper]{\color[color=#fab3ad]{A ESPER}}
 \define[command=attheesper]{\color[color=#fab3ad]{NA ESPER}}
+\define[command=oftheesper]{\color[color=#fab3ad]{DA ESPER}}
 \define[command=partners]{PARCEIROS}
 \define[command=family]{FAMÍLIA}
 \define[command=attrspy]{\color[color=#610a10]{SPY}}
@@ -33,18 +34,20 @@ DOSSIÊ DA OPERAÇÃO ***
 
 ALVO: ***
 
-SIGILO: MÁXIMO
-
-PERIGO: MÁXIMO
+SITUAÇÃO: SIGILOSA
 
 RISCO: MÁXIMO
 
-COMPLEXIDADE: MÁXIMA
-
-DIFICULDADE: MÁXIMA
-
-IMPORTÂNCIA: MÁXIMA
+ESCALA: ULTRASECRETO
 \end{raggedright}
+\bigskip
+\begin{center}
+SOMENTE PARA SEUS OLHOS
+\end{center}
+\bigskip
+\begin{raggedleft}
+Boa sorte, agente.
+\end{raggedleft}
 \framebreak
 
 \section{PREMISSA}
@@ -101,6 +104,38 @@ em momentos achem mais divertido do que continuar a narrar os acontecimentos.
 Outra coisa: as falhas nos testes não significam necessáriamente que a personagem em si falhou: apenas que as coisas se
 complicam. Antes que \thespy falhasse em destrancar a porta, a sala que ela dava acesso estava vazia; mas depois da
 falha dele, ela estava repleta de agentes inimigos! Ou \theesper falhando em colar numa prova ao ler as mentes de seus
-pode significar que ela escolheu justo aquele aluno que estava super confiante ao chutar tudo.
+pode significar que ela escolheu justo aquele aluno que estava super confiante, mas chutando tudo.
+
+\section{GERADOR DE AVENTURAS}
+
+\raggedright{Local da cena (1d6):}
+\begin{enumerate}
+  \item{Na praça de um parque}
+  \item{Dentro de um supermercado}
+  \item{Passeando pela cidade}
+  \item{Na praia}
+  \item{No zoológico}
+  \item{Num castelo}
+\end{enumerate}
+
+\raggedright{Objetivo secreto (1d6):}
+\begin{enumerate}
+  \item{\theesper está aqui pra conseguir um bixinho novo}
+  \item{\thespy veio trazer algo importante para um contato}
+  \item{\theassassin está estudando a sua próxima vítima}
+  \item{\theesper veio impedir um desastre desconhecido pelos pais}
+  \item{\thespy veio se infiltrar em uma reunião secreta}
+  \item{\theassassin veio se livrar de uma testemunha de ontem à noite}
+\end{enumerate}
+
+\raggedright{Reviravolta (1d6):}
+\begin{enumerate}
+  \item{Vocês têm que voltar mais cedo, pra ver o desenho \oftheesper}
+  \item{}
+  \item{}
+  \item{}
+  \item{}
+  \item{}
+\end{enumerate}
 
 \end{document}
