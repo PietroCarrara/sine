@@ -9,6 +9,7 @@
 \define[command=thisgame]{\color[color=#610a10]{SPY}x\color[color=#57675c]{FAMILY}}
 \define[command=thespy]{\color[color=#8da99b]{O ESPIÃO}}
 \define[command=theassassin]{\color[color=#610a10]{A ASSASSINA}}
+\define[command=oftheassassin]{\color[color=#610a10]{DA ASSASSINA}}
 \define[command=theesper]{\color[color=#fab3ad]{A ESPER}}
 \define[command=attheesper]{\color[color=#fab3ad]{NA ESPER}}
 \define[command=oftheesper]{\color[color=#fab3ad]{DA ESPER}}
@@ -34,15 +35,15 @@ DOSSIÊ DA OPERAÇÃO ***
 
 ALVO: ***
 
-SITUAÇÃO: SIGILOSA
-
 RISCO: MÁXIMO
 
-ESCALA: ULTRASECRETO
+SITUAÇÃO: SIGILOSA
+
+PRIORIDADE: SEM PRECEDENTES
 \end{raggedright}
 \bigskip
 \begin{center}
-SOMENTE PARA SEUS OLHOS
+PARA SEUS OLHOS SOMENTE
 \end{center}
 \bigskip
 \begin{raggedleft}
@@ -117,7 +118,7 @@ pode significar que ela escolheu justo aquele aluno que estava super confiante, 
   \item{No zoológico}
   \item{Num castelo}
 \end{enumerate}
-
+\framebreak
 \raggedright{Objetivo secreto (1d6):}
 \begin{enumerate}
   \item{\theesper está aqui pra conseguir um bixinho novo}
@@ -130,9 +131,9 @@ pode significar que ela escolheu justo aquele aluno que estava super confiante, 
 
 \raggedright{Reviravolta (1d6):}
 \begin{enumerate}
-  \item{Vocês têm que voltar mais cedo, pra ver o desenho \oftheesper}
-  \item{}
-  \item{}
+  \item{\theesper descobre que há um avaliador da escola aqui}
+  \item{\thespy não sabe, mas seus inimigos prepararam uma emboscada}
+  \item{Um parente \oftheassassin (membro da polícia secreta) veio junto}
   \item{}
   \item{}
   \item{}
